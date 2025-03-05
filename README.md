@@ -34,7 +34,7 @@ Untuk mulai menggunakan repositori ini, ikuti langkah-langkah berikut:
 3. Pilih **"Open Git Bash here"** (atau "Git Bash di sini").
 4. Jalankan perintah berikut untuk meng-clone repositori:
    ```sh
-   git clone git@github.com:FerdiMaulana06/kostin.git
+   git clone git@github.com:FerdiMaulana06/KOSTIN.git
    ```
 5. Setelah proses clone selesai, masuk ke folder repositori dengan:
    ```sh
