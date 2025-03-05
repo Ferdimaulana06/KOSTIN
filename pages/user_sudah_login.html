@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOSTIN</title>
+    <link rel="icon" href="/assets/kostin.svg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script defer src="/js/script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/assets/kostintxt.svg" alt="kostin-logo" width="180" height="40" viewBox="0 0 180 40">
+        </div>
+        <div class="nav-items">
+            <div class="language-selector" id="language-selector">
+                <div class="selected-language" id="selected-language">
+                    <img src="/assets/indonesia_flag.png" alt="id-flag" class="flag-icon">
+                    <span>ID</span>
+                    <img src="/assets/bottom_arrow_icon.png" alt="dropdown icon" class="arrow-icon">
+                </div>
+                <ul class="language-dropdown" id="language-dropdown">
+                    <li data-lang="id">
+                        <img src="/assets/indonesia_flag.png" alt="ID Flag" class="flag-icon">
+                        <span>Indonesia</span>
+                    </li>
+                    <li data-lang="en">
+                        <img src="/assets/uk_flag.png" alt="EN Flag" class="flag-icon">
+                        <span>English</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- User Menu (ikon user + dropdown) -->
+            <div class="user-menu" id="user-menu">
+                <img src="/assets/account_profile_user.png" alt="User Icon" class="user-icon" />
+                <ul class="user-dropdown" id="user-dropdown">
+                <li>Profil</li>
+                <li><a href="/index.html">Keluar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Temukan Kos Impianmu</h1>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <div class="input-group">
+                        <img src="/assets/location_marker_icon.png" class="icon" alt="Lokasi">
+                        <input type="text" placeholder="Lokasi">
+                    </div>
+                    <div class="input-group">
+                        <img src="/assets/search_icon.png" class="icon" alt="Cari">
+                        <input type="text" placeholder="Kata Kunci">
+                    </div>
+                    <button class="search-btn">Cari Kos</button>
+                </div>
+            </div>
+
+            <div class="popular-cities">
+                    <span>Kota Populer:</span>
+                    <a href="#">Jakarta</a>
+                    <a href="#">Bandung</a>
+                    <a href="#">Surabaya</a>
+                    <a href="#">Yogyakarta</a>
+                    <a href="#">Bali</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Fitur Unggulan</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <img src="/assets/home_icon.png" class="feature-icon" alt="Home Icon">
+                <h3>Detail Lengkap</h3>
+                <p>Informasi lengkap tentang fasilitas dan harga kos</p>
+            </div>
+            <div class="feature-card">
+                <img src="/assets/speech-bubble_icon.png" class="feature-icon" alt="Chat Icon">
+                <h3>Chat Langsung</h3>
+                <p>Komunikasi langsung dengan pemilik kos</p>
+            </div>
+            <div class="feature-card">
+                <img src="/assets/calendar_icon.png" class="feature-icon" alt="Calendar Icon">
+                <h3>Booking Mudah</h3>
+                <p>Proses booking yang cepat dan aman</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="recommendations">
+        <h2>Rekomendasi</h2>
+        <div class="kos-list">
+            <div class="kos-card">
+                <img src="https://placehold.co/321x320" alt="Kos 1">
+                <h4>Nama Kos</h4>
+                <p class="price">Rp 1.000.000 - 2.000.000</p>
+                <div class="rating">
+                    <img src="/assets/star.png" alt="Star Icon">
+                    <span>4.9</span>
+                </div>
+            </div>
+            <div class="kos-card">
+                <img src="https://placehold.co/321x320" alt="Kos 2">
+                <h4>Nama Kos</h4>
+                <p class="price">Rp 1.000.000 - 2.000.000</p>
+                <div class="rating">
+                    <img src="/assets/star.png" alt="Star Icon">
+                    <span>4.9</span>
+                </div>
+            </div>
+            <div class="kos-card">
+                <img src="https://placehold.co/321x320" alt="Kos 3">
+                <h4>Nama Kos</h4>
+                <p class="price">Rp 1.000.000 - 2.000.000</p>
+                <div class="rating">
+                    <img src="/assets/star.png" alt="Star Icon">
+                    <span>4.9</span>
+                </div>
+            </div>
+            <div class="kos-card">
+                <img src="https://placehold.co/321x320" alt="Kos 4">
+                <h4>Nama Kos</h4>
+                <p class="price">Rp 1.000.000 - 2.000.000</p>
+                <div class="rating">
+                    <img src="/assets/star.png" alt="Star Icon">
+                    <span>4.9</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Frequently Asked Question</h2>
+        <div class="faq-items">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Question</span>
+                    <img src="/assets/bottom_arrow_icon.png" alt="Arrow Icon" class="arrow-icon">
+                </div>
+                <div class="faq-answer">Answer</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Question</span>
+                    <img src="/assets/bottom_arrow_icon.png" alt="Arrow Icon" class="arrow-icon">
+                </div>
+                <div class="faq-answer">Answer</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Question</span>
+                    <img src="/assets/bottom_arrow_icon.png" alt="Arrow Icon" class="arrow-icon">
+                </div>
+                <div class="faq-answer">Answer</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section brand-info">
+                <h3>KOSTIN</h3>
+                <p>Temukan kos sesuai dengan kebutuhanmu</p>
+            </div>
+            <div class="footer-section services">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#">Cari Kos</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">Syarat dan Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Hubungi Kami</h4>
+                <p><img src="/assets/envelope_icon.png" alt="Email" class="contact-icon"> kostin@gmail.com</p>
+                <p><img src="/assets/phone_handset_icon.png" alt="Phone" class="contact-icon"> 0800-1234-5678</p>
+            </div>
+            <div class="footer-section social">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="/assets/facebook_icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="/assets/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="/assets/twitter_icon.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-copyright">© 2025 KOSTIN. Dibuat dengan ❤️</p>
+    </footer>
+    
+</body>
+</html>
