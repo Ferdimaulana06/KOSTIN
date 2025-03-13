@@ -22,19 +22,24 @@ body {
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    padding: 20px 100px;
+    height: 5rem;
     background: white;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
-    position: fixed;
-    transition: top 0.3s ease-in-out;
     border-bottom: 0.5px solid rgb(175, 175, 175);
+}
+
+.container-nav{
+    display: flex;
+    justify-content: space-between; /* Memisahkan logo & menu */
+    align-items: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 75rem;
+    position: fixed;
 }
 
 .nav-items {
@@ -103,14 +108,16 @@ body {
     grid-template-columns: 2fr 2fr; /* Kolom kiri lebih besar */
     grid-template-rows: auto;
     gap: 10px;
-    max-width: 81rem;
+    max-width: 75rem;
     margin: 110px auto;
+    margin-bottom: 32px;
 }
 
 .gallery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .main-image {
@@ -150,5 +157,121 @@ body {
 .small-images img:nth-child(4) {
     border-radius: 0 0 10px 0px; /* Hanya gambar terakhir sudut bawah kanan */
 }
+/*
+Untuk nama kost dan detail lainnya
+*/
 
 
+.kos-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    max-width: 75rem;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  
+  .kos-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .kos-details {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .kos-category {
+    background-color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0.5px solid #333;
+  }
+  
+  .kos-rating {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .kos-actions {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+  }
+  
+  .share,.save {
+    background-color: #ffffff;
+    border: 1px solid #a9a9a9;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .share:hover {
+    background-color: #2c68ff;
+  }
+
+  .save:hover{
+    background-color: #2c68ff;
+  }
+
+  .kos-container2 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    max-width: 75rem;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+
+}
+  
+#online-text{
+    color: rgb(0, 182, 12);
+}
+
+.kos-sub1{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+}
+
+.total-pembayaran{
+    width: 450px;
+    height: 300px;
+    background-color: #2c68ff;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.profile-photos{
+    height: 70px;
+    width: 70px;
+}
+
+.kos-info2{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 32px;
+    gap: 20px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.kos-left-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
