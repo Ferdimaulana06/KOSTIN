@@ -2,7 +2,7 @@
 
 /* Adjust navbar for search results page */
 .navbar {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px #641a7796;
 }
 
 /* Add search bar to navbar */
@@ -23,7 +23,7 @@
 .search-input {
     width: 100%;
     padding: 10px 10px 10px 35px;
-    border: 1px solid #ddd;
+    border: 1px solid #641a7796;
     border-radius: 20px;
     font-size: 14px;
     outline: none;
@@ -78,16 +78,17 @@
 .kos-item {
     display: flex;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .kos-image {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 214px;
     background-color: #ddd;
     flex-shrink: 0;
+    border-radius: 10px;
 }
 
 .kos-details {
