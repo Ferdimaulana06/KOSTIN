@@ -14,14 +14,23 @@
         <img src="kostin.svg" alt="Logo" class="logo">
         <h2 class="title">Lupa Password</h2>
         <p class="subtitle">Masukkan email untuk verifikasi pembuatan password baru</p>
-        <form>
+        <form id="forgotPasswordForm">
             <div class="input-group">
-                <img src="email.png" alt="Email Icon" class="icon">
-                <input type="email" placeholder="Email" required>
+                <img src="email.png" alt="View Icon" class="email-icon">
+                <input type="email" id="emailInput" placeholder="Email">
             </div>
             <button type="submit" class="submit-btn">Kirim</button>
         </form>
         <p class="info-text">Kode verifikasi akan dikirim ke akun email Anda</p>
     </div>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <button class="close-btn" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
