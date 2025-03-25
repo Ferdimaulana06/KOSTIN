@@ -462,7 +462,6 @@ UNTUK BAGIAN KIRI
     gap: 12px;
     align-items: center;
     color: #555;
-    font-size: smaller;
 }
 .spesifikasi2{
     display: flex;
@@ -470,7 +469,6 @@ UNTUK BAGIAN KIRI
     gap: 12px;
     align-items: center;
     color: #555;
-    font-size: smaller;
 }
 
 .kos-info3 img{
@@ -513,7 +511,6 @@ UNTUK BAGIAN KIRI
     display: flex;
     flex-direction: row;
     gap: 12px;
-    font-size: smaller;
     align-items: start;
     color: #555;
 }
@@ -521,7 +518,6 @@ UNTUK BAGIAN KIRI
     display: flex;
     flex-direction: row;
     gap: 12px;
-    font-size: smaller;
     align-items: start;
     color: #555;
 }
@@ -529,7 +525,6 @@ UNTUK BAGIAN KIRI
     display: flex;
     flex-direction: row;
     gap: 12px;
-    font-size: smaller;
     align-items: start;
     color: #555;
 }
@@ -537,7 +532,6 @@ UNTUK BAGIAN KIRI
     display: flex;
     flex-direction: row;
     gap: 12px;
-    font-size: smaller;
     align-items: start;
     color: #555;
 }
@@ -552,7 +546,6 @@ UNTUK BAGIAN KIRI
     display: flex;
     flex-direction: row;
     gap: 12px;
-    font-size: smaller;
     align-items: start;
     color: #555;
 }
@@ -560,7 +553,6 @@ UNTUK BAGIAN KIRI
     display: flex;
     flex-direction: row;
     gap: 12px;
-    font-size: smaller;
     align-items: start;
     color: #555;
 }
@@ -568,7 +560,6 @@ UNTUK BAGIAN KIRI
     display: flex;
     flex-direction: row;
     gap: 12px;
-    font-size: smaller;
     align-items: start;
     color: #555;
 }
@@ -576,7 +567,6 @@ UNTUK BAGIAN KIRI
     display: flex;
     flex-direction: row;
     gap: 12px;
-    font-size: smaller;
     align-items: start;
     color: #555;
 }
@@ -593,14 +583,13 @@ UNTUK BAGIAN KIRI
     gap: 12px;
     padding-bottom: 32px;
     border-bottom: 1px solid #ddd;
-    font-size: smaller;
 }
 
 .comment-section{
     display: flex;
     flex-direction: column;
     margin-top: 32px;
-    font-size: smaller;
+    width: 100%;
 }
 .top-comment-section{
     display: flex;
@@ -613,17 +602,152 @@ UNTUK BAGIAN KIRI
     width: 32px;
 }
 
-h1{
-    font-weight: 500;
+.star-ratingss{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 64px;
+    justify-content: space-between;
+    
+}
+.star-rating-left{
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+
+}
+.star-rating-right{
+    display: flex;
+    flex-direction: row;
+    gap:28px;
+
 }
 
-footer {
-    background: #ddd;
+.kategori-rating{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.bintang-rating{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.bintang-rating img{
+    height: 16px;
+    width: 16px;
+}
+
+.bintang-atas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 24px;
+    gap: 4px;
+}
+.bintang-tengah{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 24px;
+    gap: 4px;
+}
+.bintang-bawah{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+    gap: 4px;
+}
+
+.bintang-rating-kanan{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.bintang-rating-kanan img{
+    height: 16px;
+    width: 16px;
+}
+
+.star-rating-right{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.bintang-atas-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 24px;
+    gap: 4px;
+}
+
+.bintang-tengah-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 24px;
+    gap: 4px;
+
+}
+
+.bintang-bawah-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+    gap: 4px;
+}
+
+.number-rate{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.footer {
+    background: #e4e4e4;
     color: white;
-    text-align: center;
     padding: 10px;
     position: flex;
-    height: 1000px;
     width: 100%;
     bottom: 0;
+    margin-top: 32px;
+}
+
+.footer-container{
+    width: 100%;
+    max-width: 75rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.footer-container h3{
+    color: #000000;
+}
+
+.footer-content-1{
+    list-style: none;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    color: #000000;
+}
+
+.footer-content-1 ul{
+    list-style: none;
+}
+.footer-content-1 li{
+    list-style: none;
 }
