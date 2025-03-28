@@ -12,6 +12,16 @@
 
 <body>
     <div class="container">
+        <div class="sidebar">
+            <div class="menu-container">
+                <div class="menu-item active">Profil Pengguna</div>
+                <div class="menu-item">Pesanan</div>
+                <div class="menu-item">Pembayaran</div>
+                <div class="menu-item">Daftar Keinginan</div>
+                <div class="divider"></div>
+                <div class="menu-item logout">Keluar</div>
+            </div>
+        </div>
         <form action="simpan_profil.php" method="POST">
             <div class="main-content">
                 <div class="header">
@@ -20,6 +30,11 @@
                 </div>
 
                 <div class="content-row">
+                    <div class="profile-card">
+                        <div class="avatar"></div>
+                        <div class="profile-name">Ferdi Maulana</div>
+                        <div class="profile-phone">+62 123-4567-8987</div>
+                    </div>
                     <div class="info-card">
                         <h2>Informasi Umum</h2>
                         <div class="form-group">
