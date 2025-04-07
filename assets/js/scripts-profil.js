@@ -55,5 +55,5 @@ function closeDeleteModal() {
 
 function deleteAccount() {
     // Redirect ke file delete_account.php untuk menghapus akun
-    window.location.href = "/apps/hapus-akun.php";
+    window.location.href = "hapus-akun.php";
 }

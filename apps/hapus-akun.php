@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /apps/login.php");
+    header("Location: login.php");
     exit();
 }
 
@@ -13,6 +13,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
 
 if ($stmt->execute()) {
+    echo "Berhasil hapus akun";
     $stmt->close();
     $conn->close();
     session_destroy();

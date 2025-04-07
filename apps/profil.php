@@ -24,7 +24,7 @@ $conn->close();
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profil Pengguna</title>
-  <link rel="stylesheet" href="/assets/css/style-profil.css" />
+  <link rel="stylesheet" href="../assets/css/style-profil.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     /* Styling tambahan untuk tombol Back to Home */
@@ -120,6 +120,6 @@ $conn->close();
     </div>
   </div>
 
-  <script src="/assets/js/scripts-profil.js"></script>
+  <script src="../assets/js/scripts-profil.js"></script>
 </body>
 </html>

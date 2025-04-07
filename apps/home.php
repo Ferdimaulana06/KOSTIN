@@ -8,28 +8,30 @@ if (!isset($_SESSION['user_id'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOSTIN - Beranda</title>
-    <link rel="icon" href="/assets/img/kostin.svg">
-    <link rel="stylesheet" href="/assets/css/style-home.css">
+    <link rel="icon" href="../assets/img/kostin.svg">
+    <link rel="stylesheet" href="../assets/css/style-home.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <script defer src="/assets/js/scripts-home.js"></script>
+    <script defer src="../assets/js/scripts-home.js"></script>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
-            <img src="/assets/img/index/kostintxt.svg" alt="kostin-logo" width="180" height="40">
+            <img src="assets/img/index/kostintxt.svg" alt="kostin-logo" width="180" height="40">
         </div>
         <div class="nav-items">
             <div class="user-menu" id="user-menu">
                 <span>Halo, <?php echo htmlspecialchars($_SESSION['full_name']); ?></span>
-                <img src="/assets/img/index/account_profile_user.png" alt="User Icon" class="user-icon">
+                <img src="../assets/img/index/account_profile_user.png" alt="User Icon" class="user-icon">
                 <ul class="user-dropdown" id="user-dropdown">
-                    <li><a href="/apps/profil.php">Profil</a></li>
-                    <li><a href="/apps/logout.php">Keluar</a></li>
+                    <li><a href="profil.php">Profil</a></li>
+                    <li><a href="logout.php">Keluar</a></li>
                 </ul>
             </div>
         </div>
@@ -55,12 +57,12 @@ if (!isset($_SESSION['user_id'])) {
             </div>
 
             <div class="popular-cities">
-                    <span>Kota Populer:</span>
-                    <a href="#">Jakarta</a>
-                    <a href="#">Bandung</a>
-                    <a href="#">Surabaya</a>
-                    <a href="#">Yogyakarta</a>
-                    <a href="#">Bali</a>
+                <span>Kota Populer:</span>
+                <a href="#">Jakarta</a>
+                <a href="#">Bandung</a>
+                <a href="#">Surabaya</a>
+                <a href="#">Yogyakarta</a>
+                <a href="#">Bali</a>
             </div>
         </div>
     </section>
@@ -176,7 +178,8 @@ if (!isset($_SESSION['user_id'])) {
             <div class="footer-section contact">
                 <h4>Hubungi Kami</h4>
                 <p><img src="/assets/img/index/envelope_icon.png" alt="Email" class="contact-icon"> kostin@gmail.com</p>
-                <p><img src="/assets/img/index/phone_handset_icon.png" alt="Phone" class="contact-icon"> 0800-1234-5678</p>
+                <p><img src="/assets/img/index/phone_handset_icon.png" alt="Phone" class="contact-icon"> 0800-1234-5678
+                </p>
             </div>
             <div class="footer-section social">
                 <h4>Ikuti Kami</h4>
@@ -192,4 +195,5 @@ if (!isset($_SESSION['user_id'])) {
     </footer>
 
 </body>
+
 </html>
