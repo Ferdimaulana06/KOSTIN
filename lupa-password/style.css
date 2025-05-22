@@ -3,15 +3,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(90deg, #4b2687 0%, #64a0d7 100%);
-    font-family: 'Poppins', sans-serif;
+    background: #fff;
     margin: 0;
+}
+
+* {
+    font-family: Poppins;
 }
 
 .container {
     background: #fff;
     padding: 40px;
-    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 350px;
 }
@@ -31,7 +33,7 @@ body {
 
 .subtitle {
     font-size: 13px;
-    color: #555;
+    color: #000000;
     margin-bottom: 20px;
     text-align: left;
 }
@@ -39,9 +41,8 @@ body {
 .input-group {
     display: flex;
     align-items: center;
-    background: #f5f3ff;
+    background: #ffffff;
     padding: 10px;
-    border-radius: 10px;
     margin-bottom: 20px;
     border: 1.25px solid #ccc;
 }
@@ -57,12 +58,6 @@ body {
     margin-right: 8px;
 }
 
-.email-icon {
-    width: 13px;
-    height: 16px;
-    margin-right: 8px;
-}
-
 input {
     border: none;
     outline: none;
@@ -73,11 +68,10 @@ input {
 }
 
 .submit-btn {
-    background: #2575fc;
+    background: #2966CB;
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
     width: 100%;
