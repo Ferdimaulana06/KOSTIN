@@ -4,14 +4,17 @@ body {
     align-items: center;
     height: 100vh;
     background: rgb(196,196,196);
-    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(189,206,255,1) 35%, rgba(179,239,252,1) 100%);
-    font-family: Poppins;
+    background: #fff;
   }
+
+* {
+    font-family: Poppins;
+}
+
   .container {
     background: #fff;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 350px;
   }
@@ -46,9 +49,8 @@ body {
   .input-group {
     display: flex;
     align-items: center;
-    background: #f5f3ff;
+    background: #fff;
     padding: 10px;
-    border-radius: 10px;
     margin: 20px 0;
     border: 1.25px solid #ccc;
     height: 4vh;
@@ -71,11 +73,10 @@ body {
     font-size: 13px;
   }
   .daftar-btn {
-    background: #2575fc;
+    background: #2966CB;
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
     width: 100%;
@@ -93,6 +94,6 @@ body {
     margin-bottom: 0;
   }
   a {
-    color: #3498db;
+    color: #4B5563;
     text-decoration: none;
   }
