@@ -7,20 +7,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $password = $_POST['password'];
 
   // Query untuk mencari user berdasarkan email
-  $stmt = $conn->prepare("SELECT id, full_name, password FROM users WHERE email = ?");
+  $stmt = $conn->prepare("SELECT id, full_name, password, profil_pictures, biografi FROM users WHERE email = ?");
   $stmt->bind_param("s", $email);
   $stmt->execute();
   $stmt->store_result();
 
   // Jika email ditemukan di database
   if ($stmt->num_rows > 0) {
-    $stmt->bind_result($user_id, $full_name, $db_password);
+    $stmt->bind_result($user_id, $full_name, $db_password, $profil_pictures, $biografi);
+
     $stmt->fetch();
 
     // Cek apakah password sesuai
     if ($password == $db_password) {
       $_SESSION['user_id'] = $user_id;
       $_SESSION['full_name'] = $full_name;
+      $_SESSION['biografi'] = $biografi;
 
       // Redirect ke halaman dashboard atau halaman utama
       header("Location: home.php");
@@ -52,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <div class="container">
-    <img src="assets/img/login/kostin.svg" alt="Logo" class="logo" />
+    <img src="../assets/img/login/kostin.svg" alt="Logo" class="logo" />
     <h2 id="judultxt">Login</h2>
     <p id="txt1">Masukkan email dan password untuk melanjutkan</p>
 
@@ -62,18 +64,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <form method="POST">
       <div class="input-group">
-        <img src="/assets/img/login/email.svg" class="logo1" />
+        <img src="../assets/img/login/email.svg" class="logo1" />
         <input type="email" name="email" placeholder="Email" required />
       </div>
       <div class="input-group">
-        <img src="/assets/img/login/password.svg" class="logo2" />
+        <img src="../assets/img/login/password.svg" class="logo2" />
         <input type="password" name="password" placeholder="Password" required />
       </div>
       <button type="submit" class="login-btn">Login</button>
     </form>
 
     <p class="register-text">
-      Belum punya akun? <a href="/apps/register.php">Daftar sekarang!</a>
+      Belum punya akun? <a href="register.php">Daftar sekarang!</a>
     </p>
     <p class="forgot-password"><a href="lupa-password.php">Lupa Password?</a></p>
   </div>

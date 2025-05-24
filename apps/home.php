@@ -16,43 +16,41 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="icon" href="../assets/img/kostin.svg">
     <link rel="stylesheet" href="../assets/css/style-home.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <script defer src="../assets/js/scripts-home.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">
-            <img src="assets/img/index/kostintxt.svg" alt="kostin-logo" width="180" height="40">
-        </div>
-        <div class="nav-items">
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+        <div class="nav-items" id="nav-items">
+            <img src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180" height="40" class="logo">
             <div class="user-menu" id="user-menu">
-                <span>Halo, <?php echo htmlspecialchars($_SESSION['full_name']); ?></span>
-                <img src="../assets/img/index/account_profile_user.png" alt="User Icon" class="user-icon">
-                <ul class="user-dropdown" id="user-dropdown">
-                    <li><a href="profil.php">Profil</a></li>
-                    <li><a href="logout.php">Keluar</a></li>
+                <ul class="nav-links">
+                    <li><a href="../apps/home.php">Home</a></li>
+                    <li><a href="../apps/logout.php">About</a></li>
+                    <li><a href="../apps/logout.php">Service</a></li>
+                    <li><a href="../apps/logout.php">Contact</a></li>
                 </ul>
             </div>
         </div>
+        <button class="user-icon" onclick="window.location.href='profil.php';">
+            <img src="../assets/img/index/account_profile_user.png" alt="User Icon">
+        </button>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Temukan Kos Impianmu</h1>
-
             <div class="search-container">
                 <div class="search-box">
                     <div class="input-group">
-                        <img src="/assets/img/index/location_marker_icon.png" class="icon" alt="Lokasi">
                         <input type="text" placeholder="Lokasi">
                     </div>
-                    <div class="input-group">
-                        <img src="/assets/img/index/search_icon.png" class="icon" alt="Cari">
-                        <input type="text" placeholder="Kata Kunci">
-                    </div>
-                    <button class="search-btn">Cari Kos</button>
+                    <button class="search-btn">
+                        <img src="../assets/img/index/fi-br-search.svg" class="icon-cari" alt="Lokasi">
+                    </button>
                 </div>
             </div>
 
@@ -68,132 +66,165 @@ if (!isset($_SESSION['user_id'])) {
     </section>
 
     <!-- Features Section -->
-    <section class="features">
-        <h2>Fitur Unggulan</h2>
-        <div class="feature-cards">
-            <div class="feature-card">
-                <img src="/assets/img/index/home_icon.png" class="feature-icon" alt="Home Icon">
-                <h3>Detail Lengkap</h3>
-                <p>Informasi lengkap tentang fasilitas dan harga kos</p>
-            </div>
-            <div class="feature-card">
-                <img src="/assets/img/index/speech-bubble_icon.png" class="feature-icon" alt="Chat Icon">
-                <h3>Chat Langsung</h3>
-                <p>Komunikasi langsung dengan pemilik kos</p>
-            </div>
-            <div class="feature-card">
-                <img src="/assets/img/index/calendar_icon.png" class="feature-icon" alt="Calendar Icon">
-                <h3>Booking Mudah</h3>
-                <p>Proses booking yang cepat dan aman</p>
+    <section class="deskripsi">
+        <div class="container-deskripsi">
+            <h1 class="judul-deskripsi">Solusi Cerdas Cari Kos yang Nyaman, Strategis, dan Sesuai Budget Kamu</h1>
+            <img src="../assets/img/index/Group37.svg" alt="Check Icon" class="deskripsi-icon">
+        </div>
+        <div class="container-deskripsi2">
+            <img src="../assets/img/index/Group38.png" alt="" class="deskripsi-image">
+            <div class="deskripsi-text">
+                <h2 class="judul-deskripsi2">Kenapa Harus KOSTIN?</h2>
+                <p class="deskripsi-paragraf">Cari kos kini lebih praktis! Jelajahi berbagai pilihan kos dengan
+                    fasilitas lengkap sesuai kebutuhanmu. Mulai dari kos eksklusif hingga kos hemat, semua tersedia
+                    dalam satu platform. Cek detail kamar, harga, dan lokasi secara langsung. Cocok untuk mahasiswa,
+                    pekerja, atau siapa pun yang butuh tempat tinggal nyaman. Yuk, mulai cari kos idealmu sekarang juga!
+                </p>
+                <a href="#" class="deskripsi-button">Selengkapnya</a>
+
             </div>
         </div>
+
     </section>
 
     <!-- Recommendations Section -->
-    <section class="recommendations">
-        <h2>Rekomendasi</h2>
-        <div class="kos-list">
-            <div class="kos-card">
-                <img src="https://placehold.co/321x320" alt="Kos 1">
-                <h4>Nama Kos</h4>
-                <p class="price">Rp 1.000.000 - 2.000.000</p>
-                <div class="rating">
-                    <img src="/assets/img/index/star.png" alt="Star Icon">
-                    <span>4.9</span>
-                </div>
-            </div>
-            <div class="kos-card">
-                <img src="https://placehold.co/321x320" alt="Kos 2">
-                <h4>Nama Kos</h4>
-                <p class="price">Rp 1.000.000 - 2.000.000</p>
-                <div class="rating">
-                    <img src="/assets/img/index/star.png" alt="Star Icon">
-                    <span>4.9</span>
-                </div>
-            </div>
-            <div class="kos-card">
-                <img src="https://placehold.co/321x320" alt="Kos 3">
-                <h4>Nama Kos</h4>
-                <p class="price">Rp 1.000.000 - 2.000.000</p>
-                <div class="rating">
-                    <img src="/assets/img/index/star.png" alt="Star Icon">
-                    <span>4.9</span>
-                </div>
-            </div>
-            <div class="kos-card">
-                <img src="https://placehold.co/321x320" alt="Kos 4">
-                <h4>Nama Kos</h4>
-                <p class="price">Rp 1.000.000 - 2.000.000</p>
-                <div class="rating">
-                    <img src="/assets/img/index/star.png" alt="Star Icon">
-                    <span>4.9</span>
-                </div>
+    <section class="recommendation">
+        <div class="container-recommendation">
+            <h1 class="judul-recommendation">Rekomendasi Kos Terbaik untuk Anda</h1>
+            <button class="see-all">Lihat Semua</button>
+        </div>
+        <!-- slider recommendation -->
+        <div class="swiper container-recommendation2">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card swiper-slide">
+                        <a class="card-link" href="#">
+                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
+                            <div class="card-content">
+                                <h3 class="card-judul">Kost Las Vegas</h3>
+                                <div class="card-location">
+                                    <img src="../assets/img/index/lokasi.svg" alt="">
+                                    <p>Sanden, Kota Magelang</p>
+                                </div>
+                                <h3 class="harga-kos">Rp 650.000</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card swiper-slide">
+                        <a class="card-link" href="#">
+                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
+                            <div class="card-content">
+                                <h3 class="card-judul">Kost Las Vegas</h3>
+                                <div class="card-location">
+                                    <img src="../assets/img/index/lokasi.svg" alt="">
+                                    <p>Sanden, Kota Magelang</p>
+                                </div>
+                                <h3 class="harga-kos">Rp 650.000</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card swiper-slide">
+                        <a class="card-link" href="#">
+                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
+                            <div class="card-content">
+                                <h3 class="card-judul">Kost Las Vegas</h3>
+                                <div class="card-location">
+                                    <img src="../assets/img/index/lokasi.svg" alt="">
+                                    <p>Sanden, Kota Magelang</p>
+                                </div>
+                                <h3 class="harga-kos">Rp 650.000</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card swiper-slide">
+                        <a class="card-link" href="#">
+                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
+                            <div class="card-content">
+                                <h3 class="card-judul">Kost Las Vegas</h3>
+                                <div class="card-location">
+                                    <img src="../assets/img/index/lokasi.svg" alt="">
+                                    <p>Sanden, Kota Magelang</p>
+                                </div>
+                                <h3 class="harga-kos">Rp 650.000</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card swiper-slide">
+                        <a class="card-link" href="#">
+                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
+                            <div class="card-content">
+                                <h3 class="card-judul">Kost Las Vegas</h3>
+                                <div class="card-location">
+                                    <img src="../assets/img/index/lokasi.svg" alt="">
+                                    <p>Sanden, Kota Magelang</p>
+                                </div>
+                                <h3 class="harga-kos">Rp 650.000</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card swiper-slide">
+                        <a class="card-link" href="#">
+                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
+                            <div class="card-content">
+                                <h3 class="card-judul">Kost Las Vegas</h3>
+                                <div class="card-location">
+                                    <img src="../assets/img/index/lokasi.svg" alt="">
+                                    <p>Sanden, Kota Magelang</p>
+                                </div>
+                                <h3 class="harga-kos">Rp 650.000</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
+
+    </section>
+    <section class="bantuan">
+        <div class="container-bantuan">
+            <h2 class="judul-bantuan">Butuh bantuan atau ada pertanyaan? <br>Hubungi kami, kami siap membantu <br> kapan
+                saja!
+            </h2>
+            <div class="container-form-bantuan">
+                <form method="POST">
+                    <div class="input-group-bantuan">
+                        <input type="text" placeholder="Nama Lengkap">
+                    </div>
+                    <div class="input-group-bantuan">
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <a href="" class="text-button-bantuan">Kirim</a>
+
+                </form>
+            </div>
+        </div>
+
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
-        <h2>Frequently Asked Question</h2>
-        <div class="faq-items">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Question</span>
-                    <img src="/assets/img/index/bottom_arrow_icon.png" alt="Arrow Icon" class="arrow-icon">
-                </div>
-                <div class="faq-answer">Answer</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Question</span>
-                    <img src="/assets/img/index/bottom_arrow_icon.png" alt="Arrow Icon" class="arrow-icon">
-                </div>
-                <div class="faq-answer">Answer</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Question</span>
-                    <img src="/assets/img/index/bottom_arrow_icon.png" alt="Arrow Icon" class="arrow-icon">
-                </div>
-                <div class="faq-answer">Answer</div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section brand-info">
-                <h3>KOSTIN</h3>
-                <p>Temukan kos sesuai dengan kebutuhanmu</p>
+        <div class="footer-top">
+            <div class="logo-kostin">
+                <img src="../assets/img/index/kostin-white.svg" alt="KOSTIN Logo">
             </div>
-            <div class="footer-section services">
-                <h4>Layanan</h4>
-                <ul>
-                    <li><a href="#">Cari Kos</a></li>
-                    <li><a href="#">Pusat Bantuan</a></li>
-                    <li><a href="#">Syarat dan Ketentuan</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact">
-                <h4>Hubungi Kami</h4>
-                <p><img src="/assets/img/index/envelope_icon.png" alt="Email" class="contact-icon"> kostin@gmail.com</p>
-                <p><img src="/assets/img/index/phone_handset_icon.png" alt="Phone" class="contact-icon"> 0800-1234-5678
-                </p>
-            </div>
-            <div class="footer-section social">
-                <h4>Ikuti Kami</h4>
-                <div class="social-icons">
-                    <a href="#"><img src="/assets/img/index/facebook_icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="/assets/img/index/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="/assets/img/index/twitter_icon.png" alt="Twitter"></a>
-                </div>
-            </div>
+            <nav class="footer-nav">
+                <a href="#">Tentang Kami</a>
+                <a href="#">FAQ</a>
+                <a href="#">Kontak Kami</a>
+                <a href="#">Kebijakan Privasi</a>
+            </nav>
         </div>
-        <hr>
-        <p class="footer-copyright">© 2025 KOSTIN. Dibuat dengan ❤️</p>
+        <div class="footer-bottom">
+            © 2025 KOSTIN. Made with Love ❤️.
+        </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../assets/js/scripts-home.js"></script>
 </body>
 
 </html>

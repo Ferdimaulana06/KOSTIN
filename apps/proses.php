@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Simpan ke database
         $sql = "INSERT INTO users (full_name, email, password) VALUES ('$namalengkap', '$email', '$hashed_password')";
-        
+
         if ($conn->query($sql) === TRUE) {
             // Redirect ke login.php setelah berhasil
             header("Location: login.php");
