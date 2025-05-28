@@ -22,8 +22,6 @@ if (!isset($_SESSION['user_id'])) {
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-
         <div class="nav-items" id="nav-items">
             <img src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180" height="40" class="logo">
             <div class="user-menu" id="user-menu">
@@ -35,9 +33,12 @@ if (!isset($_SESSION['user_id'])) {
                 </ul>
             </div>
         </div>
-        <button class="user-icon" onclick="window.location.href='profil.php';">
-            <img src="../assets/img/index/account_profile_user.png" alt="User Icon">
-        </button>
+        <div class="right-nav-items">
+            <a href="../apps/sewakan.php" class="sewakan-button">Sewakan Rumah Anda</a>
+            <button class="user-icon" onclick="window.location.href='profil.php';">
+                <img src="../assets/img/index/account_profile_user.png" alt="User Icon">
+            </button>
+        </div>
     </nav>
 
     <!-- Hero Section -->

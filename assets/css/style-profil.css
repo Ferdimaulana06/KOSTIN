@@ -125,6 +125,33 @@ background: #ededed;
   width: 100%;
 }
 
+.judul-container-kanan{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+.edit-profile{
+    text-decoration: none;
+}
+
+.Edit{
+  color: #2966CB;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0px 15px;
+  border: 1px solid #2966CB;
+}
+.Edit:hover{
+  border: 2px solid #2966CB;
+  font-weight: 500;
+
+}
+
+
 .list-menu{
     display: flex;
     flex-direction: column;
@@ -164,6 +191,7 @@ background: #ededed;
     margin-left: 10px;
     padding: 0;
     margin-top: 20px;
+    margin-right: 100px;
 }
 
 .profil-nama{
@@ -171,4 +199,60 @@ background: #ededed;
   align-items: center;
   display: flex;
   text-align: center;
+}
+
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+  margin-right: 100px;
+}
+
+.logout {
+  text-decoration: none;
+  color: rgb(255, 0, 51);
+  font-weight: 500;
+}
+
+.keluar{
+  color: rgb(255, 0, 51);
+}
+
+.card-kos-saya{
+    display: flex;
+    gap: 10px;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-right: 100px;
+}
+
+.actions-kos-saya{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+.actions-kos-saya a{
+  text-decoration: none;
+
+}
+
+.lihat{
+color: #000;
+
+}
+
+.edit{
+color:#2966CB;
+}
+
+.hapus{
+color:rgb(255, 0, 51);
 }

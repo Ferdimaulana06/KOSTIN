@@ -61,9 +61,18 @@ $user = $result->fetch_assoc();
           <a href="#">Tentang Saya</a>
           <a href="#">Riwayat</a>
         </div>
+        <hr class="divider" />
+        <a href="#" class="logout">
+          <div class="keluar">Keluar</div>
+        </a>
       </div>
       <div class="container-kanan">
-        <h2>Tentang Saya</h2>
+        <div class="judul-container-kanan">
+          <h2>Tentang Saya</h2>
+          <a href="#" class="edit-profile">
+            <div class="Edit">Edit</div>
+          </a>
+        </div>
         <div class="card">
           <div class="card-body">
             <img src="<?php echo htmlspecialchars($user['profil_pictures'] ?? 'raiso.jpg'); ?>" alt="Profile"
@@ -74,6 +83,16 @@ $user = $result->fetch_assoc();
         <p id="biography">
           <?php echo htmlspecialchars($_SESSION['biografi'] ?? 'Biografi belum tersedia.'); ?>
         </p>
+        <hr class="divider" />
+        <h2>Kos Saya</h2>
+        <div class="card-kos-saya">
+          <div class="kos-nama">Kos Wahjo</div>
+          <div class="actions-kos-saya">
+            <a href="#" class="lihat">Lihat</a>
+            <a href="#" class="edit">Edit</a>
+            <a href="#" class="hapus">Hapus</a>
+          </div>
+        </div>
 
       </div>
   </section>
