@@ -208,12 +208,12 @@ if (!isset($_SESSION['user_id'])) {
     <!-- FAQ Section -->
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="logo-kostin">
+    <footer class="footer md:px-24 px-10">
+        <div class="footer-top justify-center flex-col  md:flex md:justify-between md:flex-row">
+            <div class="logo-kostin flex justify-center md:justify-start">
                 <img src="../assets/img/index/kostin-white.svg" alt="KOSTIN Logo">
             </div>
-            <nav class="footer-nav">
+            <nav class="footer-nav flex-col justify-center items-center md:flex-row md:items-start">
                 <a href="#">Tentang Kami</a>
                 <a href="#">FAQ</a>
                 <a href="#">Kontak Kami</a>
@@ -226,6 +226,7 @@ if (!isset($_SESSION['user_id'])) {
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../assets/js/scripts-home.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>

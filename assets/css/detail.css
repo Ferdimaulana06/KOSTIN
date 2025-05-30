@@ -10,108 +10,71 @@ body {
     height: 100%;
 }
 
-/* Navigation */
-
-.logo {
-    height: 40px;
-    width: auto;
-}
-
+/* Navbar */
 .navbar {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    height: 80px;
     background: white;
     position: relative;
-    width: 100%;
     top: 0;
     z-index: 100;
-    border-bottom: 0.5px solid #ddd;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    transition: top 0.3s ease-in-out;
+    max-width: 100rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
 }
 
-.container-nav{
-    display: flex;
-    justify-content: space-between; /* Memisahkan logo & menu */
-    align-items: center;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 75rem;
-    position: relative;
+.user-icon{
+background: none;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+border-radius: 50%;
 }
-.login-btn {
-    color: #4B5563;
-    font-weight: 600;
-    text-decoration: none;
+.user-icon:hover{
+background: #ededed;
 }
 
-.signup-btn {
-    background: #4262ff;
-    color: white;
-    padding: 8px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-}
 .nav-items {
     display: flex;
     align-items: center;
-    gap: 30px;
-}
-/* Language Selector */
-.language-selector {
-    position: relative;
-    cursor: pointer;
+    gap: 36px;
 }
 
-.selected-language {
+.nav-links {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #4B5563;
-    font-weight: 600;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    gap: 52px;
+    font-size: 16px;
+    list-style-type: none;
+    margin-right: 20px;
+    justify-content: start;
+    margin-left: 0px;
+
 }
 
-.flag-icon {
-    width: auto;
-    height: 20px;
+.nav-links a{
+    color: #333;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
+
 }
 
-.arrow-icon {
-    width: 12px;
-    height: 12px;
-}
-/* Dropdown */
-.language-dropdown {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    width: 120px;
-    list-style: none;
-    padding: 8px 0;
-}
-
-.language-dropdown li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.language-dropdown li:hover {
-    background: #f3f4f6;
-}
-
-.language-dropdown li img {
-    width: auto;
-    height: 16px;
-}
+  .user-icon img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: end;
+    align-items: end;
+  }
 
 /*untuk main content*/
 .gallery {
@@ -135,8 +98,7 @@ body {
 .main-image {
     grid-row-start: 1;
     grid-row-end: 2; /* Gambar utama lebih besar */
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+
 }
 
 .main-image img{
@@ -152,22 +114,6 @@ body {
 
 .small-images img {
     height: 16rem;
-}
-
-.small-images img:nth-child(1) {
-    border-radius: 0px; /* Gambar pertama */
-}
-
-.small-images img:nth-child(2) {
-    border-radius: 0 10px 0 0; /* Hanya sudut kanan atas */
-}
-
-.small-images img:nth-child(3) {
-    border-radius: 0px; /* Hanya sudut kiri bawah */
-}
-
-.small-images img:nth-child(4) {
-    border-radius: 0 0 10px 0px; /* Hanya gambar terakhir sudut bawah kanan */
 }
 /*
 Untuk nama kost dan detail lainnya
@@ -369,21 +315,6 @@ UNTUK KOTAK DI KANAN
     border-bottom: 1px solid #ddd;
 }
 
-.text-total-pembayaran{
-    display: flex;
-    flex-direction: row;
-    align-items:start;
-    justify-content: space-between;
-    margin-top: 16px;
-}
-.text-total-pembayaran p{
-    font-size: medium;
-    font-weight: 500;
-}
-
-#totpem{
-    text-decoration: underline;
-}
 
 .tombol-tanya-pemilik{
     display: flex;
@@ -413,24 +344,6 @@ UNTUK KOTAK DI KANAN
     color: #f2f4ff;
 }
 
-.tombol-ajukan-sewa{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    height: 50px;
-    width: 100%;
-    border-radius: 8px;
-    border: 2px solid #8476ff;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 16px;
-    cursor: pointer;
-    background-color: #f2f4ff;
-}
-.tombol-ajukan-sewa p{
-    color: #000000;
-}
 /*
 UNTUK BAGIAN KIRI
 */
@@ -716,38 +629,60 @@ UNTUK BAGIAN KIRI
     margin-top: 20px;
 }
 
+/* FOOTER */
 .footer {
-    background: #e4e4e4;
-    color: white;
-    padding: 10px;
-    position: flex;
-    width: 100%;
-    bottom: 0;
-    margin-top: 32px;
+  background-color: #2966CB; /* Warna biru seperti pada gambar */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-top: 60px;
 }
 
-.footer-container{
-    width: 100%;
-    max-width: 75rem;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-.footer-container h3{
-    color: #000000;
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
-.footer-content-1{
-    list-style: none;
-    margin-top: 64px;
-    margin-bottom: 64px;
-    color: #000000;
+.logo-kostin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 100px;
 }
 
-.footer-content-1 ul{
-    list-style: none;
+.logo-kostin img {
+  width: 200px;
+  height: 200px;
 }
-.footer-content-1 li{
-    list-style: none;
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-right: 100px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 14px;
+  margin-bottom: 40px;
 }

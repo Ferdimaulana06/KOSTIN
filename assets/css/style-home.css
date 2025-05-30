@@ -496,9 +496,7 @@ background: #ededed;
 
 .card{
     text-decoration: none;
-    padding: 24px;
     width: 100%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-image{
@@ -664,7 +662,6 @@ hr {
   gap: 10px;
   font-size: 24px;
   font-weight: bold;
-  margin-left: 100px;
 }
 
 .logo-kostin img {
@@ -676,7 +673,6 @@ hr {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  margin-right: 100px;
 }
 
 .footer-nav a {
@@ -694,40 +690,4 @@ hr {
   margin-top: 60px;
   font-size: 14px;
   margin-bottom: 40px;
-}
-
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-items {
-    display: none;
-    flex-direction: column;
-    gap: 0;
-    background: #fff;
-    position: absolute;
-    top: 60px; /* atur sesuai tinggi navbar */
-    right: 0;
-    width: 200px;
-    border: 1px solid #ccc;
-  }
-
-  .nav-items.show {
-    display: flex;
-  }
-
-  .user-dropdown {
-    position: relative;
-    box-shadow: none;
-  }
-
-  .user-menu:hover .user-dropdown {
-    display: none;
-  }
-
-  .user-menu.open .user-dropdown {
-    display: block;
-  }
 }
