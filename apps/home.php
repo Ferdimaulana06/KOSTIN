@@ -28,13 +28,13 @@ if (!isset($_SESSION['user_id'])) {
                 <ul class="nav-links">
                     <li><a href="../apps/home.php">Home</a></li>
                     <li><a href="../apps/logout.php">About</a></li>
-                    <li><a href="../apps/logout.php">Service</a></li>
+                    <li><a href="../apps/layanan.php">Service</a></li>
                     <li><a href="../apps/logout.php">Contact</a></li>
                 </ul>
             </div>
         </div>
         <div class="right-nav-items">
-            <a href="../apps/sewakan.php" class="sewakan-button">Sewakan Rumah Anda</a>
+            <a href="../apps/sewakan.php" class="sewakan-button rounded-full">Sewakan Rumah Anda</a>
             <button class="user-icon" onclick="window.location.href='profil.php';">
                 <img src="../assets/img/index/account_profile_user.png" alt="User Icon">
             </button>

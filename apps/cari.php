@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar px-10 md:flex md:justify-between md:items-center md:px-24 md:py-4">
+    <nav class="navbar px-10 md:flex md:flex-row md:justify-between md:items-center md:px-24 md:py-4">
         <div class="nav-items" id="nav-items">
             <img class="size-28 md:size-36" src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180"
                 height="40" class="logo">
@@ -47,7 +47,7 @@
             </div>
 
 
-            <div class="max-w-xs mx-auto mt-16 space-y-8 md:max-w-5xl">
+            <div class="max-w-xl mx-auto mt-8 space-y-8 md:max-w-5xl">
                 <!-- Item Kos -->
                 <div
                     class="md:max-w-4xl max-w-xl mx-auto bg-white rounded shadow-md overflow-hidden flex flex-col md:flex-row">
