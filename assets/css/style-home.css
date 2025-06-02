@@ -108,8 +108,6 @@ background: #ededed;
 }
 
   .user-icon img{
-    width: 48px;
-    height: 48px;
     border-radius: 50%;
     object-fit: cover;
     justify-content: end;
@@ -235,6 +233,10 @@ background: #ededed;
     flex-direction: column;
 }
 
+.hero-title{
+    color: white;
+}
+
 .hero-content {
     max-width: 1200px;
     width: 100%;
@@ -243,7 +245,7 @@ background: #ededed;
 
 .hero-content h1 {
     font-size: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     padding: 50px;
     max-width: 1200px;
@@ -258,7 +260,6 @@ background: #ededed;
 /* Search Container */
 .search-container {
     background: rgba(0, 0, 0, 0.5);
-    padding: 16px;
     display: flex;
     margin-top: 12px;
     max-width:800px;
@@ -272,7 +273,6 @@ background: #ededed;
     display: flex;
     align-items: center;
     width: 100%;
-    gap: 20px;
 }
 
 /* Input Group */
@@ -280,8 +280,7 @@ background: #ededed;
     display: flex;
     align-items: center;
     background: white;
-    border: 1px solid #ffffff;
-    padding: 16px;
+    border: 1px solid #3a3a3a;
     max-width: 100rem;
     width: 100%;
     position: relative;
@@ -292,8 +291,7 @@ background: #ededed;
     border: none;
     outline: none;
     width: 100%;
-    padding-left: 35px;
-    font-size: 16px;
+    padding-left: 5px;
     background-color: rgba(0, 0, 0, 0.4);
     color: #ffffff;
 }
@@ -319,7 +317,6 @@ background: #ededed;
 .search-btn {
     background: #2966CB;
     color: white;
-    border: none;
     cursor: pointer;
     font-size: 16px;
     max-width: 70px;
@@ -327,6 +324,7 @@ background: #ededed;
     text-wrap: nowrap;
     padding: 16px;
     align-items: center;
+    border: 1px solid #3a3a3a;
 
 }
 
@@ -374,11 +372,16 @@ background: #ededed;
 
 .container-deskripsi{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-left:100px;
-    padding-right:100px;
     padding-top: 48px;
+    max-width: 100rem;
+}
+.container-deskripsi2{
+    max-width: 100rem;
+}
+
+.container-deskripsi-2{
+    background: #f8f8f8;
 }
 
 .judul-deskripsi{
@@ -390,25 +393,14 @@ background: #ededed;
 }
 
 .deskripsi-icon{
-    height: 110px;
     margin-right: 20px;
     align-items: center;
     display: flex;
 }
 
-.container-deskripsi2{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left:100px;
-    padding-right:100px;
-    padding-top: 40px;
-    padding-bottom: 50px;
-}
 
 .deskripsi-image{
-    max-width: 600px;
-    width: 100%;
+    width: 600px;
 }
 
 .deskripsi-text{
@@ -417,7 +409,6 @@ background: #ededed;
     display: flex;
     align-items: start;
     flex-direction: column;
-    gap: 32px;
 }
 
 .deskripsi-paragraf{
@@ -456,6 +447,10 @@ background: #ededed;
     padding-right:100px;
     margin-top: 50px;
     padding-bottom: 50px;
+}
+
+#card-carousel{
+    max-width: 100rem;
 }
 
 .container-recommendation2{
@@ -567,29 +562,18 @@ hr {
     background-size: cover; /* agar gambar memenuhi seluruh area */
     background-position: center; /* agar gambar terpusat */
     margin: 0 auto;
-    height: 600px;
     width: 100%;
     max-width: 100rem;
     display: flex;
-    padding-top: 100px;
     text-align: center;
     color: white;
     flex-direction: column;
     margin-top: 50px;
 }
 
-.container-bantuan{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding-left:100px;
-    padding-right:100px;
-    padding-top: 48px;
-}
 
 .container-bantuan h2{
     text-align:start;
-    line-height: 50px;
     text-wrap: wrap;
 }
 
