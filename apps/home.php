@@ -25,7 +25,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="nav-items" id="nav-items">
             <img class="size-28 md:size-36" src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180"
                 height="40" class="logo">
-            <div class="user-menu hidden md:flex" id="user-menu md:flex mr-4 ml-4">
+            <div class="user-menu hidden md:hidden hidden lg:flex" id="user-menu md:flex mr-4 ml-4">
                 <ul class="nav-links ">
                     <li><a href="../apps/home.php">Home</a></li>
                     <li><a href="../apps/logout.php">About</a></li>
@@ -35,12 +35,16 @@ if (!isset($_SESSION['user_id'])) {
             </div>
         </div>
         <div class="flex gap-4 flex-row md:flex-row items-center justify-between">
+            <a href="../apps/sewakan.php" class="sewakan-button hidden md:hidden lg:flex rounded-full px-4 py-3">Sewakan
+                Rumah
+                Anda</a>
             <button class="user-icon">
                 <img class="h-[36px] md:h-[42px]" src="../assets/img/index/account_profile_user.png" alt="User Icon">
             </button>
 
-            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="w-xs md:hidden md:w-xl"
-                type="button"><img class="h-[36px] md:h-[42px]" src="../assets/img/index/hamburger.svg" alt="User Icon">
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                class="w-xs flex md:flex lg:hidden md:w-xl " type="button"><img class="h-[36px] md:h-[42px]"
+                    src="../assets/img/index/hamburger.svg" alt="User Icon">
             </button>
 
             <!-- Dropdown menu -->
@@ -136,8 +140,8 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Recommendations Section -->
     <section class="recommendation">
         <div class="container-recommendation">
-            <h1 class="judul-recommendation text-xl text-bold">Rekomendasi Kos Terbaik untuk Anda</h1>
-            <button class="see-all">Lihat Semua</button>
+            <h1 class="text-2xl font-bold">Rekomendasi Kos Terbaik untuk Anda</h1>
+            <button class="see-all lg:flex md:hidden hidden">Lihat Semua</button>
         </div>
         <!-- slider recommendation -->
         <div class="swiper container-recommendation2">
