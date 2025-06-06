@@ -10,28 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar px-10 md:flex md:flex-row md:justify-between md:items-center md:px-24 md:py-4">
-        <div class="nav-items" id="nav-items">
-            <img class="size-28 md:size-36" src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180"
-                height="40" class="logo">
-            <div class="user-menu hidden md:flex" id="user-menu md:flex mr-4 ml-4">
-                <ul class="nav-links ">
-                    <li><a href="../apps/home.php">Home</a></li>
-                    <li><a href="../apps/logout.php">About</a></li>
-                    <li><a href="../apps/logout.php">Service</a></li>
-                    <li><a href="../apps/logout.php">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="flex gap-4 flex-row md:flex-row items-center justify-between">
-            <button class="user-icon">
-                <img class="" src="../assets/img/index/account_profile_user.png" alt="User Icon">
-            </button>
-            <button class="hamburger w-xs md:hidden md:w-xl" id="hamburger">
-                <img class="size-8 md:size-48" src="../assets/img/index/hamburger.svg" alt="User Icon">
-            </button>
-        </div>
-    </nav>
+    <?php include '../apps/include/navbar.php'; ?>
     <section>
         <div class="container-cari max-w-4xl md:px-24 px-10 justify-center mx-auto">
             <h2 class="text-center text-2xl font-semibold mt-8">Cari Kost</h2>
@@ -139,23 +118,10 @@
             </div>
         </div>
     </section>
-    <footer class="footer md:px-24 px-10">
-        <div class="footer-top justify-center flex-col  md:flex md:justify-between md:flex-row">
-            <div class="logo-kostin flex justify-center md:justify-start">
-                <img src="../assets/img/index/kostin-white.svg" alt="KOSTIN Logo">
-            </div>
-            <nav class="footer-nav flex-col justify-center items-center md:flex-row md:items-start">
-                <a href="#">Tentang Kami</a>
-                <a href="#">FAQ</a>
-                <a href="#">Kontak Kami</a>
-                <a href="#">Kebijakan Privasi</a>
-            </nav>
-        </div>
-        <div class="footer-bottom">
-            © 2025 KOSTIN. Made with Love ❤️.
-        </div>
-    </footer>
+    <?php include '../apps/include/footer.php'; ?>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
 </body>
 
 </html>

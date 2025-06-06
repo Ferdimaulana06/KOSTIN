@@ -7,30 +7,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/sewakan.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-items" id="nav-items">
-            <img src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180" height="40" class="logo">
-            <div class="user-menu" id="user-menu">
-                <ul class="nav-links">
-                    <li><a href="../apps/home.php">Home</a></li>
-                    <li><a href="../apps/logout.php">About</a></li>
-                    <li><a href="../apps/logout.php">Service</a></li>
-                    <li><a href="../apps/logout.php">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="right-nav-items">
-            <a href="#" class="sewakan-button">Sewakan Rumah Anda</a>
-            <button class="user-icon" onclick="window.location.href='profil.php';">
-                <img src="../assets/img/index/account_profile_user.png" alt="User Icon">
-            </button>
-        </div>
-    </nav>
-    <div class="container">
-        <h2>Sewakan Rumah Anda</h2>
+    <?php include '../apps/include/navbar.php'; ?>
+
+    <section class="w-full container md:px-[100px] py-[40px] justify-center items-center mx-auto  px-20">
+        <h2 class="">Sewakan Rumah Anda</h2>
         <form>
             <label class="upload-area" id="uploadLabel">
                 <input type="file" id="imageInput" accept="image/*">
@@ -38,8 +23,9 @@
                 <img id="preview" class="preview-img" style="display:none;" />
             </label>
         </form>
-        <div class="input-group">
-            <div class="input-group-kiri">
+        <div
+            class="input-group md:flex md:justify-between md:items-start justify-start items-center lg:flex-row md:flex-col flex-col gap-10">
+            <div class="input-group-kiri w-full">
                 <div class="nama-kos">
                     <label for="namakos">Nama Kos</label>
                     <div>:</div>
@@ -75,30 +61,19 @@
                     <input id="hargakos" name="alamat" rows="2" placeholder="Masukkan Harga Kos Anda per Bulan"></input>
                 </div>
             </div>
-            <div class="input-group-kanan">
-                <div class="fasilitas-container">
+            <div class="input-group-kanan lg:w-1/2 md:w-full w-full">
+                <div class="fasilitas-container flex flex-row w-full">
                     <label class="label-fasilitas-item" for="fasilitasitem">Fasilitas</label>
                     <div>:</div>
-                    <div class="fasilitas-item-container">
+                    <div class="ml-[24px] w-full grid md:grid-cols-4 grid-cols-2 md:gap-4 gap-2">
                         <label class="fasilitas-item" id="fasilitasitem">
-                            <input type="checkbox" name="fasilitas" value="meja">
-                            <span>Meja</span>
+                            <input class="align-center bg-blue-500" type="checkbox" name="fasilitas" value="meja">
+                            <span class="text-m flex items-center justify-center w-full px-2 py-2">Meja</span>
                         </label>
-                        <label class="fasilitas-item" id="fasilitasitem"><input type="checkbox" name="fasilitas"
-                                value="kursi"> <span>Meja</span></label>
-                        <label class="fasilitas-item" id="fasilitasitem"><input type="checkbox" name="fasilitas"
-                                value="lemari"><span>Lemari</span></label>
-                        <label class="fasilitas-item" id="fasilitasitem"><input type="checkbox" name="fasilitas"
-                                value="wifi"> <span>Wifi</span></label>
-                        <label class="fasilitas-item" id="fasilitasitem"><input type="checkbox" name="fasilitas"
-                                value="kasur"> <span>Kasur</span></label>
-                        <label class="fasilitas-item" id="fasilitasitem"><input type="checkbox" name="fasilitas"
-                                value="ac"> <span>AC</span></label>
-                        <label class="fasilitas-item" id="fasilitasitem"><input type="checkbox" name="fasilitas"
-                                value="listrik">
-                            <span>Listrik</span></label>
-                        <label class="fasilitas-item"><input type="checkbox" name="fasilitas"
-                                value="air"><span>Air</span></label>
+                        <label class="fasilitas-item" id="fasilitasitem">
+                            <input class="" type="checkbox" name="fasilitas" value="kursi">
+                            <span class="text-m flex items-center justify-center w-full px-2 py-2  ">Kursi</span>
+                        </label>
                     </div>
                 </div>
                 <div class="peraturan-kos">
@@ -108,30 +83,17 @@
 
                 </div>
             </div>
-        </div>
-        <hr class="divider">
-        <div class="button-container">
-            <button type="submit" class="submit-button">Simpan</button>
-            <button type="reset" class="reset-button">Reset</button>
-        </div>
+    </section>
+    <hr class="divider max-w-[100rem] mx-auto">
+    <div class="button-container md:px-[100px] px-20 max-w-[100rem] mx-auto">
+        <button type="submit" class="submit-button">Simpan</button>
+        <button type="reset" class="reset-button">Reset</button>
     </div>
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="logo-kostin">
-                <img src="../assets/img/index/kostin-white.svg" alt="KOSTIN Logo">
-            </div>
-            <nav class="footer-nav">
-                <a href="#">Tentang Kami</a>
-                <a href="#">FAQ</a>
-                <a href="#">Kontak Kami</a>
-                <a href="#">Kebijakan Privasi</a>
-            </nav>
-        </div>
-        <div class="footer-bottom">
-            © 2025 KOSTIN. Made with Love ❤️.
-        </div>
-    </footer>
+    <?php include '../apps/include/footer.php'; ?>
     <script src="../assets/js/sewakan.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
 </body>
 
 </html>

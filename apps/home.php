@@ -23,9 +23,9 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Navigation -->
     <nav class="navbar px-10 md:flex md:justify-between md:items-center md:px-24 md:py-4">
         <div class="nav-items" id="nav-items">
-            <img class="size-28 md:size-36" src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180"
+            <img class="h-[36px] md:h-[42px]" src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180"
                 height="40" class="logo">
-            <div class="user-menu hidden md:hidden hidden lg:flex" id="user-menu md:flex mr-4 ml-4">
+            <div class="user-menu hidden md:hidden lg:flex" id="user-menu md:flex mr-4 ml-4">
                 <ul class="nav-links ">
                     <li><a href="../apps/home.php">Home</a></li>
                     <li><a href="../apps/logout.php">About</a></li>
@@ -35,12 +35,13 @@ if (!isset($_SESSION['user_id'])) {
             </div>
         </div>
         <div class="flex gap-4 flex-row md:flex-row items-center justify-between">
-            <a href="../apps/sewakan.php" class="sewakan-button hidden md:hidden lg:flex rounded-full px-4 py-3">Sewakan
+            <a href="../apps/sewakan.php"
+                class="sewakan-button hidden md:hidden lg:flex rounded-full px-4 py-3 h-[42px] flex-nowrap">Sewakan
                 Rumah
                 Anda</a>
-            <button class="user-icon">
+            <a href="../apps/profile.php" class="user-icon">
                 <img class="h-[36px] md:h-[42px]" src="../assets/img/index/account_profile_user.png" alt="User Icon">
-            </button>
+            </a>
 
             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
                 class="w-xs flex md:flex lg:hidden md:w-xl " type="button"><img class="h-[36px] md:h-[42px]"
@@ -54,6 +55,11 @@ if (!isset($_SESSION['user_id'])) {
                     <li>
                         <a href="#"
                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sewakan
+                            Kos</a>
                     </li>
                     <li>
                         <a href="#"
@@ -76,12 +82,12 @@ if (!isset($_SESSION['user_id'])) {
     <section class="hero md:h-[750px] h-[500px]">
         <div class="hero-content px-[50px] md:px-24">
             <h2 class="hero-title text-2xl md:text-4xl text-bold mb-5 ">Temukan Kos Impian Anda</h2>
-            <div class="search-container py-3 md:py-3 md:px-3 px-3">
+            <div class="search-container py-3 md:py-3 md:px-3 px-3 rounded-md">
                 <div class="search-box">
-                    <div class="input-group py-3 md:py-4 md:px-4 px-4">
+                    <div class="input-group py-3 md:py-4 md:px-4 px-4 rounded-l-md">
                         <input class="md:px-4 px-8 font-light md:text-base text-sm" type="text" placeholder="Lokasi">
                     </div>
-                    <button class="search-btn md:py-4 py-[9px] md:px-2 px-1">
+                    <button class="search-btn md:py-4 py-[9px] md:px-2 px-1 rounded-r-md hover:bg-[#153366]">
                         <img src="../assets/img/index/fi-br-search.svg" class="icon-cari " alt="Lokasi">
                     </button>
                 </div>
@@ -89,11 +95,11 @@ if (!isset($_SESSION['user_id'])) {
 
             <div class="popular-cities md:flex hidden items-center">
                 <span>Kota Populer:</span>
-                <a href="#">Jakarta</a>
-                <a href="#">Bandung</a>
-                <a href="#">Surabaya</a>
-                <a href="#">Yogyakarta</a>
-                <a href="#">Bali</a>
+                <a href="#" class="rounded-md">Jakarta</a>
+                <a href="#" class="rounded-md">Bandung</a>
+                <a href="#" class="rounded-md">Surabaya</a>
+                <a href="#" class="rounded-md">Yogyakarta</a>
+                <a href="#" class="rounded-md">Bali</a>
             </div>
         </div>
     </section>
@@ -101,7 +107,7 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Features Section -->
     <section class="deskripsi py-[60px]">
         <div
-            class="px-10 pb-10 md:p:0 md:bg-[#FAFAFA] flex bg-[#fff] flex flex-col items-center justify-center mx-8 md:ml-[100px] md:mr-[100px] md:shadow-none shadow-md rounded-lg md:rounded-none">
+            class="px-10 pb-10 md:p:0 md:bg-[#FAFAFA] flex bg-[#fff] flex-col items-center justify-center mx-8 md:ml-[100px] md:mr-[100px] md:shadow-none shadow-md rounded-lg md:rounded-none">
             <div
                 class=" bg-grey w-full container-deskripsi md:justify-between justify-start items-center flex-wrap gap-y-10">
                 <h1
@@ -109,7 +115,7 @@ if (!isset($_SESSION['user_id'])) {
                     Cari dan Pesan Kos dengan Mudah !</h1>
 
                 <img src="../assets/img/index/Group37.svg" alt="Check Icon"
-                    class="deskripsi-icon lg:h-[105px] md:h-[70px] sm:hidden lg:flex md:flex shrink">
+                    class="deskripsi-icon lg:h-[70px] lg:pr-[170px] md:h-[70px] sm:hidden lg:flex md:flex shrink">
             </div>
             <div
                 class="container-deskripsi2 flex w-full mt-10 flex-row items-center md:justify-between gap-y-10 flex-wrap">
@@ -120,7 +126,9 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
                 <div class=" deskripsi-text flex flex-col flex-shrink gap-y-10">
                     <h2 class="judul-deskripsi2 text-lg font-semibold">Kenapa Harus KOSTIN?</h2>
-                    <p class="deskripsi-paragraf">Cari kos kini lebih praktis! Jelajahi berbagai pilihan kos dengan
+                    <p class="deskripsi-paragraf md:text-md text-sm leading-[2]">Cari kos kini lebih praktis! Jelajahi
+                        berbagai
+                        pilihan kos dengan
                         fasilitas lengkap sesuai kebutuhanmu. Mulai dari kos eksklusif hingga kos hemat, semua
                         tersedia
                         dalam satu platform. Cek detail kamar, harga, dan lokasi secara langsung. Cocok untuk
@@ -139,92 +147,52 @@ if (!isset($_SESSION['user_id'])) {
 
     <!-- Recommendations Section -->
     <section class="recommendation">
-        <div class="container-recommendation">
-            <h1 class="text-2xl font-bold">Rekomendasi Kos Terbaik untuk Anda</h1>
+        <div class="container-recommendation mx-10  md:px-[40px] md:justify-between justify-start md:mx-[100px]">
+            <h1 class="text-lg font-semibold">Rekomendasi Kos Terbaik untuk Anda</h1>
             <button class="see-all lg:flex md:hidden hidden">Lihat Semua</button>
         </div>
         <!-- slider recommendation -->
         <div class="swiper container-recommendation2">
-            <div class="card-wrapper">
+            <div class="card-wrapper md:px-10 mx-[100px]">
                 <ul class="card-list swiper-wrapper">
-                    <li class="card swiper-slide">
-                        <a class="card-link" href="#">
-                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
-                            <div class="card-content">
-                                <h3 class="card-judul">Kost Las Vegas</h3>
-                                <div class="card-location">
-                                    <img src="../assets/img/index/lokasi.svg" alt="">
-                                    <p>Sanden, Kota Magelang</p>
-                                </div>
-                                <h3 class="harga-kos">Rp 650.000</h3>
+                    <div
+                        class="swiper-slide flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:border-neutral-700 dark:shadow-neutral-700/70">
+                        <div class="md:h-[200px] h-[150px]">
+                            <img class="w-full h-full object-cover rounded-t-xl" src="../assets/img/index/rumah1.png"
+                                alt="Card Image">
+                        </div>
+                        <div class="p-4 md:p-5">
+                            <h3 class="card-judul">Kost Las Vegas</h3>
+                            <div class="card-location mt-3">
+                                <img class="md:flex hidden" src="../assets/img/index/lokasi.svg" alt="">
+                                <p class="text-xs md:text-md">Sanden, Kota Magelang</p>
                             </div>
-                        </a>
-                    </li>
-                    <li class="card swiper-slide">
-                        <a class="card-link" href="#">
-                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
-                            <div class="card-content">
-                                <h3 class="card-judul">Kost Las Vegas</h3>
-                                <div class="card-location">
-                                    <img src="../assets/img/index/lokasi.svg" alt="">
-                                    <p>Sanden, Kota Magelang</p>
-                                </div>
-                                <h3 class="harga-kos">Rp 650.000</h3>
+                            <h3 class="harga-kos mt-3 font-bold text-xl">Rp 650.000</h3>
+                            <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                href="#">
+                                Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:border-neutral-700 dark:shadow-neutral-700/70">
+                        <div class="md:h-[200px] h-[150px]">
+                            <img class="w-full h-full object-cover rounded-t-xl" src="../assets/img/index/rumah1.png"
+                                alt="Card Image">
+                        </div>
+                        <div class="p-4 md:p-5">
+                            <h3 class="card-judul">Kost Las Vegas</h3>
+                            <div class="card-location mt-3">
+                                <img class="md:flex hidden" src="../assets/img/index/lokasi.svg" alt="">
+                                <p class="text-xs md:text-md">Sanden, Kota Magelang</p>
                             </div>
-                        </a>
-                    </li>
-                    <li class="card swiper-slide">
-                        <a class="card-link" href="#">
-                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
-                            <div class="card-content">
-                                <h3 class="card-judul">Kost Las Vegas</h3>
-                                <div class="card-location">
-                                    <img src="../assets/img/index/lokasi.svg" alt="">
-                                    <p>Sanden, Kota Magelang</p>
-                                </div>
-                                <h3 class="harga-kos">Rp 650.000</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card swiper-slide">
-                        <a class="card-link" href="#">
-                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
-                            <div class="card-content">
-                                <h3 class="card-judul">Kost Las Vegas</h3>
-                                <div class="card-location">
-                                    <img src="../assets/img/index/lokasi.svg" alt="">
-                                    <p>Sanden, Kota Magelang</p>
-                                </div>
-                                <h3 class="harga-kos">Rp 650.000</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card swiper-slide">
-                        <a class="card-link" href="#">
-                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
-                            <div class="card-content">
-                                <h3 class="card-judul">Kost Las Vegas</h3>
-                                <div class="card-location">
-                                    <img src="../assets/img/index/lokasi.svg" alt="">
-                                    <p>Sanden, Kota Magelang</p>
-                                </div>
-                                <h3 class="harga-kos">Rp 650.000</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card swiper-slide">
-                        <a class="card-link" href="#">
-                            <img src="../assets/img/index/rumah1.png" alt="Kos 1" class="card-image">
-                            <div class="card-content">
-                                <h3 class="card-judul">Kost Las Vegas</h3>
-                                <div class="card-location">
-                                    <img src="../assets/img/index/lokasi.svg" alt="">
-                                    <p>Sanden, Kota Magelang</p>
-                                </div>
-                                <h3 class="harga-kos">Rp 650.000</h3>
-                            </div>
-                        </a>
-                    </li>
+                            <h3 class="harga-kos mt-3 font-bold text-xl">Rp 650.000</h3>
+                            <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                href="#">
+                                Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
                 </ul>
                 <div class="swiper-button-next md:flex hidden"></div>
                 <div class="swiper-button-prev md:flex hidden"></div>
@@ -234,7 +202,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
     </section>
-    <section class="bantuan px-[100px] justify-center items-center flex-col py-[150px]">
+    <section class="bantuan px-[100px] justify-center items-center flex-col py-[150px] mt-20">
         <div
             class="container-bantuan flex-col md:flex-row justify-center md:justify-between flex flex-wrap gap-y-10 mx-5 md:mx-0 items-center gap-x-20">
             <h2
@@ -266,22 +234,7 @@ if (!isset($_SESSION['user_id'])) {
     <!-- FAQ Section -->
 
     <!-- Footer -->
-    <footer class="footer md:px-24 px-10">
-        <div class="footer-top justify-center flex-col  md:flex md:justify-between md:flex-row">
-            <div class="logo-kostin flex justify-center md:justify-start">
-                <img src="../assets/img/index/kostin-white.svg" alt="KOSTIN Logo">
-            </div>
-            <nav class="footer-nav flex-col justify-center items-center md:flex-row md:items-start">
-                <a href="#">Tentang Kami</a>
-                <a href="#">FAQ</a>
-                <a href="#">Kontak Kami</a>
-                <a href="#">Kebijakan Privasi</a>
-            </nav>
-        </div>
-        <div class="footer-bottom">
-            © 2025 KOSTIN. Made with Love ❤️.
-        </div>
-    </footer>
+    <?php include '../apps/include/footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../assets/js/scripts-home.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>

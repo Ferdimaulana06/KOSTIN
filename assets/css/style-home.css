@@ -433,18 +433,13 @@ background: #ededed;
 /* Recommendations Section */
 .recommendation{
     max-width: 100rem;
-    width: 100%;
     margin: 0 auto;
 }
 
 .container-recommendation{
     max-width: 100rem;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-left:100px;
-    padding-right:100px;
     margin-top: 50px;
     padding-bottom: 50px;
 }
@@ -461,7 +456,6 @@ background: #ededed;
     align-items: center;
     padding-left:100px;
     padding-right:100px;
-    padding-bottom: 50px;
 }
 .card-list{
     text-decoration: none;
@@ -481,11 +475,8 @@ background: #ededed;
 
 .card-wrapper{
     text-decoration: none;
-    margin-left: 77px;
-    margin-right: 100px;
     max-width: 1400px;
     overflow: hidden;
-    margin-bottom: 77px;
 
 }
 

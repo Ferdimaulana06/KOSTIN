@@ -107,15 +107,12 @@ background: #ededed;
 }
 
   .user-icon img{
-    width: 48px;
-    height: 48px;
     border-radius: 50%;
     object-fit: cover;
     justify-content: end;
     align-items: end;
   }
 
-  /* Dropdown user */
   .sewakan-button{
     display: flex;
     align-items: center;
@@ -149,8 +146,6 @@ background: #ededed;
 
   .container {
     max-width: 100rem;
-    margin: 0 auto;
-    padding: 40px 100px;
     background: #FAFAFA;
     
   }
@@ -159,7 +154,6 @@ background: #ededed;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    justify-content: space-between;
   }
 
   .upload-area {
@@ -203,19 +197,8 @@ background: #ededed;
   object-fit: contain;
 }
 
-.input-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;
-}
+
 .input-group-kiri{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    
-}
-.input-group-kanan{
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -326,19 +309,10 @@ background: #ededed;
 
 .fasilitas-container{
     margin-top: 30px;
-    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
 }
-
-.fasilitas-item-container {
-    display: grid;
-    row-gap: 15px;
-    grid-template-columns: repeat(5, auto); /* 3 kolom */
-    flex: 1;
-    margin-left: 5px;
-  }
 
 .label-fasilitas-item{
   display: flex;
@@ -367,10 +341,7 @@ background: #ededed;
   display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    padding: 5px 30px;
     cursor: pointer;
-    margin-left: 19px;
-    gap: 5px;
     transition: all 0.2s;
     flex: 1;
     color: #888;
@@ -458,7 +429,6 @@ background: #ededed;
   gap: 10px;
   font-size: 24px;
   font-weight: bold;
-  margin-left: 100px;
 }
 
 .logo-kostin img {
@@ -470,7 +440,6 @@ background: #ededed;
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  margin-right: 100px;
 }
 
 .footer-nav a {

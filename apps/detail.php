@@ -13,22 +13,7 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="nav-items" id="nav-items">
-      <img src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180" height="40" class="logo">
-      <div class="user-menu" id="user-menu">
-        <ul class="nav-links">
-          <li><a href="../apps/home.php">Home</a></li>
-          <li><a href="../apps/logout.php">About</a></li>
-          <li><a href="../apps/logout.php">Service</a></li>
-          <li><a href="../apps/logout.php">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <button class="user-icon">
-      <img src="../assets/img/index/account_profile_user.png" alt="User Icon">
-    </button>
-  </nav>
+  <?php include '../apps/include/navbar.php'; ?>
   <section>
     <div class="gallery">
       <img src="../assets/img/index/gambaromah.jpg" class="main-image" alt="Main Image" />
@@ -151,22 +136,9 @@
         </div>
       </div>
   </section>
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="logo-kostin">
-        <img src="../assets/img/index/kostin-white.svg" alt="KOSTIN Logo">
-      </div>
-      <nav class="footer-nav">
-        <a href="#">Tentang Kami</a>
-        <a href="#">FAQ</a>
-        <a href="#">Kontak Kami</a>
-        <a href="#">Kebijakan Privasi</a>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      © 2025 KOSTIN. Made with Love ❤️.
-    </div>
-  </footer>
+  <?php include '../apps/include/footer.php'; ?>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>
 
 </html>

@@ -34,37 +34,17 @@ $user = $result->fetch_assoc();
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 
 </head>
 
 <body>
   <!-- Tombol Back to Home -->
-  <nav class="navbar px-10 md:flex md:justify-between md:items-center md:px-24 md:py-4">
-    <div class="nav-items" id="nav-items">
-      <img class="size-28 md:size-36" src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180" height="40"
-        class="logo">
-      <div class="user-menu hidden md:flex" id="user-menu md:flex mr-4 ml-4">
-        <ul class="nav-links ">
-          <li><a href="../apps/home.php">Home</a></li>
-          <li><a href="../apps/logout.php">About</a></li>
-          <li><a href="../apps/logout.php">Service</a></li>
-          <li><a href="../apps/logout.php">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="flex gap-4 flex-row md:flex-row items-center justify-between">
-      <button class="user-icon">
-        <img class="" src="../assets/img/index/account_profile_user.png" alt="User Icon">
-      </button>
-      <button class="hamburger w-xs md:hidden md:w-xl" id="hamburger">
-        <img class="size-8 md:size-48" src="../assets/img/index/hamburger.svg" alt="User Icon">
-      </button>
-    </div>
-  </nav>
+  <?php include '../apps/include/navbar.php'; ?>
   <section class="section-profil pt-10 md:pt-0">
     <div class="container-profile flex flex-col md:flex-row">
       <div
-        class="hidden md:flex container-kiri px-10  md:px-24 md:py-10 order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left">
+        class="hidden md:flex container-kiri px-10  md:px-24 md:py-10 order-2 md:order-1 flex-col items-center md:items-start text-center md:text-left">
         <h2 class="profil text-2xl font-semibold">Profil</h2>
         <div class="list-menu">
           <a href="#">Tentang Saya</a>
@@ -77,9 +57,12 @@ $user = $result->fetch_assoc();
 
       </div>
       <div class="container-kanan px-10 md:px-24 md:pt-10 order-1 md:order-2">
-        <div class="judul-container-kanan">
-          <h2 class="text-center w-full md:text-left text-2xl font-semibold">Tentang Saya</h2>
-          <a href="#" class="edit-profile hidden md:flex-start">
+        <div
+          class="w-full judul-container-kanan justify-center md:justify-start items-center md:items-start flex flex-col md:flex-row">
+          <h2
+            class="text-center justify-center items-center md:justify-start md:items-start md:text-left text-2xl font-semibold">
+            Tentang Saya</h2>
+          <a href="#" class="edit-profile hidden md:items-start md:justify-start md:flex">
             <div class="Edit">Edit</div>
           </a>
         </div>
@@ -110,22 +93,7 @@ $user = $result->fetch_assoc();
 
       </div>
   </section>
-  <footer class="footer md:px-24 px-10">
-    <div class="footer-top justify-center flex-col  md:flex md:justify-between md:flex-row">
-      <div class="logo-kostin flex justify-center md:justify-start">
-        <img src="../assets/img/index/kostin-white.svg" alt="KOSTIN Logo">
-      </div>
-      <nav class="footer-nav flex-col justify-center items-center md:flex-row md:items-start">
-        <a href="#">Tentang Kami</a>
-        <a href="#">FAQ</a>
-        <a href="#">Kontak Kami</a>
-        <a href="#">Kebijakan Privasi</a>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      © 2025 KOSTIN. Made with Love ❤️.
-    </div>
-  </footer>
+  <?php include '../apps/include/footer.php'; ?>
 </body>
 
 </html>
