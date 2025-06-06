@@ -1,0 +1,104 @@
+.profile-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+  color: #2966cb;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2966cb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(41, 102, 203, 0.1);
+}
+
+.char-counter {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.save-btn {
+  background: #2966cb;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background: #1e4d8f;
+}
+
+.delete-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.delete-section h2 {
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #c3e6cb;
+}

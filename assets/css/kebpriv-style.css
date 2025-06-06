@@ -1,0 +1,298 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: white;
+    min-height: 100vh;
+}
+
+/* Navigation */
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    justify-content: start;
+    margin-right: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background: white;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown user */
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  list-style: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem 0;
+}
+
+.user-menu:hover .user-dropdown {
+  display: block;
+}
+
+.user-icon{
+background: none;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+border-radius: 50%;
+}
+.user-icon:hover{
+background: #ededed;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    gap: 52px;
+    font-size: 16px;
+    list-style-type: none;
+    margin-right: 20px;
+    justify-content: start;
+    margin-left: 0px;
+
+}
+
+.nav-links a{
+    color: #333;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
+
+}
+
+  .user-icon img{
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .sewakan-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2966CB;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    max-width: fit-content;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .sewakan-button:hover{
+    background-color: #3482ff;
+    transition: ease-in-out 0.3s;
+    transform: scale(1.05);
+  }
+
+  .sewakan-button a{
+    text-decoration: none;
+  }
+
+  .right-nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-direction: row;
+  }
+
+/* Login & Signup Button */
+.login-btn {
+    color: #4B5563;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-btn {
+    background: #6D9CC5;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+    cursor: pointer;
+}
+
+.selected-language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4B5563;
+    font-weight: 600;
+}
+
+.flag-icon {
+    width: auto;
+    height: 20px;
+}
+
+.arrow-icon {
+    width: 12px;
+    height: 12px;
+}
+
+/* Dropdown */
+.language-dropdown {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 120px;
+    list-style: none;
+    padding: 8px 0;
+}
+
+.language-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.language-dropdown li:hover {
+    background: #f3f4f6;
+}
+
+.language-dropdown li img {
+    width: auto;
+    height: 16px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: #000;
+}
+
+p {
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #2966CB; /* Warna biru seperti pada gambar */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.logo-kostin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-kostin img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
