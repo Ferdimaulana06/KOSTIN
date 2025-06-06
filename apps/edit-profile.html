@@ -1,0 +1,100 @@
+<?php
+session_start();
+require_once '../config/database.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Ambil data user
+$stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
+$stmt->execute([$_SESSION['user_id']]); $user = $stmt->fetch(PDO::FETCH_ASSOC);
+// Handle success message $success = isset($_GET['success']) ? true : false; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOSTIN - Edit Profil</title>
+    <link rel="stylesheet" href="../assets/css/style-profil.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- Navigation sama dengan sebelumnya -->
+    </nav>
+
+    <main class="profile-container">
+      <?php if($success): ?>
+      <div class="success-message">Profil berhasil diperbarui!</div>
+      <?php endif; ?>
+
+      <h1 class="profile-title">Edit Profil</h1>
+
+      <form class="profile-form" method="POST" action="update_profile.php">
+        <div class="form-group">
+          <label for="full_name">Nama Pengguna</label>
+          <input
+            type="text"
+            id="full_name"
+            name="full_name"
+            value="<?= htmlspecialchars($user['full_name']) ?>"
+            required
+            maxlength="50"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="biografi">Deskripsi Diri</label>
+          <textarea
+            id="biografi"
+            name="biografi"
+            rows="5"
+            required
+            maxlength="500"
+          >
+<?= htmlspecialchars($user['biografi']) ?></textarea
+          >
+          <div class="char-counter">
+            <span id="char-count">500</span> karakter tersisa
+          </div>
+        </div>
+
+        <button type="submit" class="save-btn">Simpan</button>
+      </form>
+
+      <div class="delete-section">
+        <h2>Hapus Akun</h2>
+        <p>Apakah Anda yakin ingin menghapus akun secara permanen?</p>
+        <button class="delete-btn" onclick="confirmDelete()">
+          Ya, Hapus Akun
+        </button>
+      </div>
+    </main>
+
+    <script>
+      // Karakter counter
+      const bioTextarea = document.getElementById("biografi");
+      const charCount = document.getElementById("char-count");
+
+      bioTextarea.addEventListener("input", () => {
+        const remaining = 500 - bioTextarea.value.length;
+        charCount.textContent = remaining;
+        charCount.style.color = remaining < 50 ? "#e74c3c" : "#666";
+      });
+
+      function confirmDelete() {
+        if (
+          confirm("Apakah Anda yakin ingin menghapus akun secara permanen?")
+        ) {
+          window.location.href = "delete_account.php";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,126 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/cari.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - KOSTIN</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: '#246bfd',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/sewakan.css">
 </head>
 
-<body>
-    <?php include '../apps/include/navbar.php'; ?>
-    <section>
-        <div class="container-cari max-w-4xl md:px-24 px-10 justify-center mx-auto">
-            <h2 class="text-center text-2xl font-semibold mt-8">Cari Kost</h2>
-            <div class="flex w-full max-w-4xl mt-4 justify-center items-center mx-auto">
-                <input type="text" placeholder="Ketik nama kost atau lokasi..."
-                    class=" search-input-custom w-full px-4 border border-gray-500 rounded-l-sm focus:outline-none" />
+<body class="font-poppins bg-gray-100 text-gray-800">
 
-                <button type="submit" class="rounded-r-sm search-button-custom px-4 flex items-center justify-center">
-                    <img src="../assets/img/index/fi-br-search.svg"
-                        class="w-5 h-5 filter group-hover:invert group-hover:brightness-0 group-hover:contrast-200"
-                        alt="Cari">
-                </button>
-            </div>
+  <!-- Navbar -->
+  <?php include '../apps/include/navbar.php'; ?>
 
+  <!-- Hero Section -->
+  <section class="relative h-64 bg-cover bg-center" style="background-image: url('../assets/img/index/image 15 faq.svg')">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <h1 class="text-white text-3xl md:text-4xl font-semibold">
+        Frequently Asked Questions
+      </h1>
+    </div>
+  </section>
 
-            <div class="max-w-xl mx-auto mt-8 space-y-8 md:max-w-5xl">
-                <!-- Item Kos -->
-                <div
-                    class="md:max-w-4xl max-w-xl mx-auto bg-white rounded shadow-md overflow-hidden flex flex-col md:flex-row">
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-6 py-12 space-y-6">
+    <!-- FAQ Item 1 -->
+    <div class="bg-white rounded-lg shadow-md">
+      <button class="w-full flex justify-between items-center px-6 py-4 text-left font-medium faq-toggle">
+        <span>Bagaimana cara mencari kos yang sesuai dengan kebutuhan saya?</span>
+        <svg class="w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pb-4 text-sm text-gray-600">
+        Gunakan fitur pencarian dan filter lokasi, kategori, dan harga untuk menyesuaikan dengan kebutuhan Anda.
+      </div>
+    </div>
 
-                    <!-- Jika gambar ADA -->
-                    <!-- <img src="your-image.jpg" alt="Kos Iking" class="w-full md:w-64 h-48 object-cover" /> -->
+    <!-- FAQ Item 2 -->
+    <div class="bg-white rounded-lg shadow-md">
+      <button class="w-full flex justify-between items-center px-6 py-4 text-left font-medium faq-toggle">
+        <span>Apakah saya bisa langsung memesan kos melalui website ini?</span>
+        <svg class="w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pb-4 text-sm text-gray-600">
+        Ya, setelah login Anda dapat memesan kos langsung dari halaman detail kos.
+      </div>
+    </div>
 
-                    <!-- Jika gambar BELUM ADA -->
-                    <div
-                        class="w-full md:w-64 h-48 bg-gray-300 flex items-center justify-center text-gray-500 text-sm italic">
-                        No Image
-                    </div>
+    <!-- FAQ Item 3 -->
+    <div class="bg-white rounded-lg shadow-md">
+      <button class="w-full flex justify-between items-center px-6 py-4 text-left font-medium faq-toggle">
+        <span>Bagaimana jika saya ingin bertanya lebih lanjut kepada pemilik kos?</span>
+        <svg class="w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pb-4 text-sm text-gray-600">
+        Anda dapat menggunakan fitur kontak langsung atau chat dengan pemilik melalui profil kos yang tersedia.
+      </div>
+    </div>
+  </section>
 
-                    <!-- Konten -->
-                    <div class="p-5 flex flex-col justify-between flex-1">
-                        <div>
-                            <h2 class="text-xl font-bold flex items-center gap-2">
-                                Kos Iking
-                                <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Kos Putra</span>
-                            </h2>
-                            <p class="text-sm text-gray-600 mt-3 flex items-center">
-                                <img src="..\assets\img\index\fi-br-marker.svg" alt=""
-                                    class="w-4 h-4 mr-1 items-center">
-                                Kramat Selatan, Magelang Utara
-                            </p>
-                        </div>
-                        <p class="text-lg text-blue-600 font-bold mt-2 md:mt-4">Rp 650.000/Bulan</p>
-                    </div>
-                </div>
+  <!-- Divider -->
+  <hr class="divider max-w-[100rem] mx-auto">
 
-                <!-- Item Kos 2 -->
-                <div class="max-w-4xl mx-auto bg-white rounded shadow-md overflow-hidden flex flex-col md:flex-row">
+  <!-- Footer -->
+  <?php include '../apps/include/footer.php'; ?>
 
-                    <!-- Jika gambar ADA -->
-                    <!-- <img src="your-image.jpg" alt="Kos Iking" class="w-full md:w-64 h-48 object-cover" /> -->
-
-                    <!-- Jika gambar BELUM ADA -->
-                    <div
-                        class="w-full md:w-64 h-48 bg-gray-300 flex items-center justify-center text-gray-500 text-sm italic">
-                        No Image
-                    </div>
-
-                    <!-- Konten -->
-                    <div class="p-5 flex flex-col justify-between flex-1">
-                        <div>
-                            <h2 class="text-xl font-bold flex items-center gap-2">
-                                Kos Iking
-                                <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Kos Putra</span>
-                            </h2>
-                            <p class="text-sm text-gray-600 mt-3 flex items-center">
-                                <img src="..\assets\img\index\fi-br-marker.svg" alt=""
-                                    class="w-4 h-4 mr-1 items-center">
-                                Kramat Selatan, Magelang Utara
-                            </p>
-                        </div>
-                        <p class="text-lg text-blue-600 font-bold mt-2 md:mt-4">Rp 650.000/Bulan</p>
-                    </div>
-                </div>
-
-                <!-- Item Kos 3 -->
-                <div
-                    class="max-w-2xl mx-auto bg-white rounded shadow-md overflow-hidden flex flex-col md:flex-row md:max-w-4xl">
-
-                    <!-- Jika gambar ADA -->
-                    <!-- <img src="your-image.jpg" alt="Kos Iking" class="w-full md:w-64 h-48 object-cover" /> -->
-
-                    <!-- Jika gambar BELUM ADA -->
-                    <div
-                        class="w-full md:w-64 h-48 bg-gray-300 flex items-center justify-center text-gray-500 text-sm italic">
-                        No Image
-                    </div>
-
-                    <!-- Konten -->
-                    <div class="p-5 flex flex-col justify-between flex-1">
-                        <div>
-                            <h2 class="text-xl font-bold flex items-center gap-2">
-                                Kos Iking
-                                <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Kos Putra</span>
-                            </h2>
-                            <p class="text-sm text-gray-600 mt-3 flex items-center">
-                                <img src="..\assets\img\index\fi-br-marker.svg" alt=""
-                                    class="w-4 h-4 mr-1 items-center">
-                                Kramat Selatan, Magelang Utara
-                            </p>
-                        </div>
-                        <p class="text-lg text-blue-600 font-bold mt-2 md:mt-4">Rp 650.000/Bulan</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <?php include '../apps/include/footer.php'; ?>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  <!-- Script Accordion -->
+  <script>
+    const toggles = document.querySelectorAll(".faq-toggle");
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector("svg");
+        content.classList.toggle("hidden");
+        icon.classList.toggle("rotate-180");
+      });
+    });
+  </script>
 
 </body>
 
