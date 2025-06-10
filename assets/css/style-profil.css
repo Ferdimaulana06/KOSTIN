@@ -117,12 +117,6 @@ background: #ededed;
   max-width: 100rem;
   width: 100%;
   margin: 0 auto;
-  height: 100%;
-}
-
-.container-kiri,
-.container-kanan {
-  height: 100vh;
 }
 
 .container-kiri {

@@ -42,9 +42,9 @@ $user = $result->fetch_assoc();
   <!-- Tombol Back to Home -->
   <?php include '../apps/include/navbar.php'; ?>
   <section class="section-profil pt-10 md:pt-0">
-    <div class="container-profile flex flex-col md:flex-row">
+    <div class="container-profile flex flex-col md:flex-row items-stretch">
       <div
-        class="hidden md:flex container-kiri px-10  md:px-24 md:py-10 order-2 md:order-1 flex-col items-center md:items-start text-center md:text-left">
+        class="hidden md:flex container-kiri px-10  md:px-24 md:py-10 order-2 md:order-1 flex-col items-center md:items-start text-center md:text-left h-full">
         <h2 class="profil text-2xl font-semibold">Profil</h2>
         <div class="list-menu">
           <a href="#">Tentang Saya</a>
@@ -56,7 +56,7 @@ $user = $result->fetch_assoc();
         </a>
 
       </div>
-      <div class="container-kanan px-10 md:px-24 md:pt-10 order-1 md:order-2">
+      <div class="container-kanan px-10 md:px-24 md:pt-10 order-1 md:order-2 flex flex-col">
         <div
           class="w-full judul-container-kanan justify-center md:justify-start items-center md:items-start flex flex-col md:flex-row">
           <h2
@@ -82,6 +82,30 @@ $user = $result->fetch_assoc();
         </div>
         <hr class="divider w-full" />
         <h2 class="text-center md:flex text-2xl font-semibold md:text-left">Kos Saya</h2>
+        <div class="card-kos-saya w-full">
+          <div class="kos-nama">Kos Wahjo</div>
+          <div class="actions-kos-saya">
+            <a href="#" class="lihat">Lihat</a>
+            <a href="#" class="edit">Edit</a>
+            <a href="#" class="hapus">Hapus</a>
+          </div>
+        </div>
+        <div class="card-kos-saya w-full">
+          <div class="kos-nama">Kos Wahjo</div>
+          <div class="actions-kos-saya">
+            <a href="#" class="lihat">Lihat</a>
+            <a href="#" class="edit">Edit</a>
+            <a href="#" class="hapus">Hapus</a>
+          </div>
+        </div>
+        <div class="card-kos-saya w-full">
+          <div class="kos-nama">Kos Wahjo</div>
+          <div class="actions-kos-saya">
+            <a href="#" class="lihat">Lihat</a>
+            <a href="#" class="edit">Edit</a>
+            <a href="#" class="hapus">Hapus</a>
+          </div>
+        </div>
         <div class="card-kos-saya w-full">
           <div class="kos-nama">Kos Wahjo</div>
           <div class="actions-kos-saya">

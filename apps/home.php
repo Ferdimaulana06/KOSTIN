@@ -92,14 +92,14 @@ if (!isset($_SESSION['user_id'])) {
 
     <!-- Recommendations Section -->
     <section class="recommendation">
-        <div class="container-recommendation mx-10  md:px-[40px] md:justify-between justify-start md:mx-[100px]">
+        <div class="container-recommendation mx-10 md:px-[40px] md:justify-between justify-start md:mx-[100px]">
             <h1 class="text-lg font-semibold">Rekomendasi Kos Terbaik untuk Anda</h1>
             <button class="see-all lg:flex md:hidden hidden">Lihat Semua</button>
         </div>
         <!-- slider recommendation -->
         <div class="swiper container-recommendation2">
-            <div class="card-wrapper md:px-10 mx-[100px]">
-                <ul class="card-list swiper-wrapper">
+            <div class="card-wrapper md:px-10 mx-[20px] md:mx-[100px]">
+                <ul class="card-list swiper-wrapper mb-[50px]">
                     <div
                         class="swiper-slide flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:border-neutral-700 dark:shadow-neutral-700/70">
                         <div class="md:h-[200px] h-[150px]">
