@@ -10,30 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar px-10 md:flex md:flex-row md:justify-between md:items-center md:px-24 md:py-4">
-        <div class="nav-items" id="nav-items">
-            <img class="size-28 md:size-36" src="../assets/img/index/kostintxt.svg" alt="kostin-logo" width="180"
-                height="40" class="logo">
-            <div class="user-menu hidden md:flex mr-4 ml-5" id="user-menu">
-                <ul class="nav-links ">
-                    <li><a href="../apps/home.php">Home</a></li>
-                    <li><a href="../apps/logout.php">About</a></li>
-                    <li><a href="../apps/logout.php">Service</a></li>
-                    <li><a href="../apps/logout.php">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="flex gap-4 flex-row md:flex-row items-center justify-between">
-            <a href="../apps/sewakan.php" class="sewakan-button hidden md:flex rounded-full px-4 py-3">Sewakan Rumah
-                Anda</a>
-            <button class="user-icon">
-                <img class="" src="../assets/img/index/account_profile_user.png" alt="User Icon">
-            </button>
-            <button class="hamburger w-xs md:hidden md:w-xl" id="hamburger">
-                <img class="size-8 md:size-48" src="../assets/img/index/hamburger.svg" alt="User Icon">
-            </button>
-        </div>
-    </nav>
+    <?php include '../apps/include/navbar.php'; ?>
 
     <section class="sectionatas items-center mx-auto justify-center flex flex-col md:flex-row  md:items-center">
         <div class="flex flex-col justify-center items-center my-auto px-10 md:px-24">

@@ -74,6 +74,30 @@
                             <input class="" type="checkbox" name="fasilitas" value="kursi">
                             <span class="text-m flex items-center justify-center w-full px-2 py-2  ">Kursi</span>
                         </label>
+                        <label class="fasilitas-item" id="fasilitasitem">
+                            <input class="" type="checkbox" name="fasilitas" value="kursi">
+                            <span class="text-m flex items-center justify-center w-full px-2 py-2  ">AC</span>
+                        </label>
+                        <label class="fasilitas-item" id="fasilitasitem">
+                            <input class="" type="checkbox" name="fasilitas" value="kursi">
+                            <span class="text-m flex items-center justify-center w-full px-2 py-2  ">Air</span>
+                        </label>
+                        <label class="fasilitas-item" id="fasilitasitem">
+                            <input class="" type="checkbox" name="fasilitas" value="kursi">
+                            <span class="text-m flex items-center justify-center w-full px-2 py-2  ">Lemari</span>
+                        </label>
+                        <label class="fasilitas-item" id="fasilitasitem">
+                            <input class="" type="checkbox" name="fasilitas" value="kursi">
+                            <span class="text-m flex items-center justify-center w-full px-2 py-2  ">Listrik</span>
+                        </label>
+                        <label class="fasilitas-item" id="fasilitasitem">
+                            <input class="" type="checkbox" name="fasilitas" value="kursi">
+                            <span class="text-m flex items-center justify-center w-full px-2 py-2  ">Wi-fi</span>
+                        </label>
+                        <label class="fasilitas-item" id="fasilitasitem">
+                            <input class="" type="checkbox" name="fasilitas" value="kursi">
+                            <span class="text-m flex items-center justify-center w-full px-2 py-2  ">Kasur</span>
+                        </label>
                     </div>
                 </div>
                 <div class="peraturan-kos">

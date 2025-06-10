@@ -66,11 +66,26 @@
 
     </section>
     <section
-        class="max-w-[100rem] py-[40px] mx-auto justify-center items-center md:px-[100px] px-[40px] lg:bg-gray-100 bg-white">
+        class="max-w-[100rem] py-[40px] mx-auto justify-center items-center md:px-[100px] px-[40px] bg-white lg:bg-gray-100">
         <div
-            class=" lg:bg-gray-100 md:bg-white px-6 py-6 md:py-10 md:px-24 max-w-[100rem] flex flex-col md:flex-col lg:flex-row lg:items-start lg:justify-between items-center justify-center lg:gap-20 lg:rounded-none lg:shadow-none bg-white rounded-lg shadow-xl">
-            <div class="space-y-6 text-gray-800">
-                <!-- 1. Kemudahan -->
+            class="px-6 py-6 md:py-10 md:px-24 max-w-[100rem] flex flex-col lg:flex-row items-start justify-between gap-10 lg:rounded-none rounded-lg shadow-xl lg:shadow-none">
+
+            <!-- Gambar di KIRI -->
+            <div
+                class="flex flex-col justify-center relative bg-[#0B2A5A] text-white rounded-xl p-8 w-full lg:w-[400px] h-[440px]">
+                <div class="absolute inset-0 bg-no-repeat bg-center bg-cover rounded-xl opacity-30"
+                    style="background-image: url('../assets/img/index/card-tentang.png');"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold mb-4">Nilai Inti ✦</h2>
+                    <p class="text-base leading-relaxed">
+                        Nilai-nilai inti yang menjadi dasar dalam setiap layanan dan keputusan yang kami ambil di
+                        KOSTIN.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Teks di KANAN -->
+            <div class="space-y-6 text-gray-800 w-full">
                 <div>
                     <h3 class="font-bold text-lg">1. Kemudahan</h3>
                     <p class="mt-1 text-base leading-8">
@@ -79,7 +94,6 @@
                     </p>
                 </div>
 
-                <!-- 2. Kepercayaan -->
                 <div>
                     <h3 class="font-bold text-lg">2. Kepercayaan</h3>
                     <p class="mt-1 text-base leading-8">
@@ -87,7 +101,6 @@
                     </p>
                 </div>
 
-                <!-- 3. Transparansi -->
                 <div>
                     <h3 class="font-bold text-lg">3. Transparansi</h3>
                     <p class="mt-1 text-base leading-8">
@@ -96,7 +109,6 @@
                     </p>
                 </div>
 
-                <!-- 4. Inovasi -->
                 <div>
                     <h3 class="font-bold text-lg">4. Inovasi</h3>
                     <p class="mt-1 text-base leading-8">
@@ -105,15 +117,8 @@
                     </p>
                 </div>
             </div>
-            <div
-                class="hidden lg:flex md:hidden flex-col md:flex-row items-start md:items-center md:mr-[150px] md:order-1 mr-0">
-                <!-- Gambar untuk versi desktop -->
-                <div
-                    class="hidden lg:flex md:hidden h-[440px] w-[300px] bg-[url(../assets/img/index/card-tentang.png)] bg-cover bg-center rounded-xl">
-                </div>
-                <!-- Konten Teks -->
 
-            </div>
+        </div>
     </section>
     <?php include '../apps/include/footer.php'; ?>
 </body>

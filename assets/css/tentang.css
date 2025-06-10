@@ -68,14 +68,6 @@ background: #ededed;
 
 }
 
-  .user-icon img{
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-    justify-content: end;
-    align-items: end;
-  }
 
   .sectionatas{
     background-image: url('../img/index/layanan.png');
