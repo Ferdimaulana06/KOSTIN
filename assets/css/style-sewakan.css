@@ -1,0 +1,490 @@
+/* ================================
+   style-sewakan.css
+   ================================ */
+
+/* --- Reset & Font --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: white;
+  min-height: 100vh;
+}
+
+/* Navigation */
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    justify-content: start;
+    margin-right: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background: white;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown user */
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  list-style: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem 0;
+}
+
+.user-menu:hover .user-dropdown {
+  display: block;
+}
+
+.user-icon{
+background: none;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+border-radius: 50%;
+}
+.user-icon:hover{
+background: #ededed;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    gap: 52px;
+    font-size: 16px;
+    list-style-type: none;
+    margin-right: 20px;
+    justify-content: start;
+    margin-left: 0px;
+
+}
+
+.nav-links a{
+    color: #333;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
+
+}
+
+  .user-icon img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .sewakan-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2966CB;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    max-width: fit-content;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .sewakan-button:hover{
+    background-color: #3482ff;
+    transition: ease-in-out 0.3s;
+    transform: scale(1.05);
+  }
+
+  .sewakan-button a{
+    text-decoration: none;
+  }
+
+  .right-nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-direction: row;
+  }
+
+/* ======================
+   Container
+   ====================== */
+.container {
+  max-width: 100rem;
+  margin: 2rem auto;
+  background: #FAFAFA;
+  border-radius: 8px;
+  padding: 2rem 6%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Page Title */
+.page-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2966CB;
+}
+
+/* ======================
+   Form Grid (Dua Kolom)
+   ====================== */
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dua kolom sama lebar */
+  gap: 2rem; /* Jarak antar kolom */
+  margin-bottom: 2rem;
+}
+
+.input-group-kiri,
+.input-group-kanan {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Jarak antar baris di dalam kolom */
+}
+
+/* ======================
+   Form Group Baris
+   ====================== */
+.input-group-kiri .nama-kos,
+.input-group-kiri .kategori-kos,
+.input-group-kiri .alamat-kos,
+.input-group-kiri .harga-kos,
+.input-group-kiri .telepon-kos,
+.input-group-kanan .fasilitas-container,
+.input-group-kanan .peraturan-kos {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* Label Lebar Konsisten */
+.input-group-kiri .nama-kos label,
+.input-group-kiri .kategori-kos label,
+.input-group-kiri .alamat-kos label,
+.input-group-kiri .harga-kos label,
+.input-group-kiri .telepon-kos label,
+.input-group-kanan .fasilitas-container > .label-fasilitas-item,
+.input-group-kanan .peraturan-kos label {
+  width: 120px; /* Atur sesuai kebutuhan */
+  font-weight: 500;
+  color: #444;
+}
+
+/* Titik Dua (:) */
+.input-group-kiri .nama-kos > div,
+.input-group-kiri .kategori-kos > div,
+.input-group-kiri .alamat-kos > div,
+.input-group-kiri .harga-kos > div,
+.input-group-kiri .telepon-kos > div,
+.input-group-kanan .fasilitas-container > div,
+.input-group-kanan .peraturan-kos > div {
+  width: 10px;
+  text-align: center;
+  color: #444;
+  margin-top: 0.25rem; /* Agar titik dua sejajar dengan teks */
+}
+
+/* Input / Textarea Gaya Konsisten */
+.input-group-kiri .nama-kos input,
+.input-group-kiri .alamat-kos textarea,
+.input-group-kiri .harga-kos input,
+.input-group-kiri .telepon-kos input,
+.input-group-kanan .peraturan-kos textarea {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: border-color 0.2s;
+}
+
+/* Focus State */
+.input-group-kiri .nama-kos input:focus,
+.input-group-kiri .alamat-kos textarea:focus,
+.input-group-kiri .harga-kos input:focus,
+.input-group-kiri .telepon-kos input:focus,
+.input-group-kanan .peraturan-kos textarea:focus {
+  border-color: #2966CB;
+  outline: none;
+  background: #fff;
+}
+
+/* ======================
+   Upload Gambar
+   ====================== */
+.group-upload {
+  margin-bottom: 2rem;
+}
+
+.upload-area {
+  position: relative;
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.upload-area:hover {
+  border-color: #2966CB;
+}
+
+.upload-area input {
+  display: none;
+}
+
+.upload-icon {
+  font-size: 2.5rem;
+  color: #ccc;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.upload-area:hover .upload-icon {
+  color: #2966CB;
+  transform: scale(1.1);
+}
+
+.preview-img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* ======================
+   Kategori (Radio) – Lebar Sama
+   ====================== */
+/* Container pilihan radio */
+.input-group-kiri .kategori-kos .kategori-options {
+  display: flex;
+  gap: 0.75rem;
+  flex: 1; /* agar mengambil lebar sisa */
+}
+
+/* Setiap label radio */
+.input-group-kiri .kategori-kos .kategori-options label {
+  flex: 1; /* sama rata 1fr untuk semua pilihan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #fafafa;
+  color: #444;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.input-group-kiri .kategori-kos .kategori-options input[type="radio"] {
+  display: none;
+}
+
+/* Saat radio dicentang, ubah seluruh kotak menjadi biru */
+.input-group-kiri .kategori-kos .kategori-options label:has(input:checked) {
+  background-color: #2966CB;
+  border-color: #2966CB;
+  color: #fff;
+}
+
+/* Hover state (tanpa memilih) */
+.input-group-kiri .kategori-kos .kategori-options label:hover {
+  border-color: #2966CB;
+  background-color: #e6f0ff;
+}
+
+/* ======================
+   Fasilitas (Checkbox) – Lebar Tetap
+   ====================== */
+/* Container grid checkbox */
+.input-group-kanan .fasilitas-container .fasilitas-item-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.75rem;
+  flex: 1;
+}
+
+/* Setiap kotak checkbox */
+.input-group-kanan .fasilitas-container .fasilitas-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  background: #fafafa;
+  color: #444;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.input-group-kanan .fasilitas-container .fasilitas-item input[type="checkbox"] {
+  display: none;
+}
+
+/* Kotak checkbox biru penuh saat dicentang */
+.input-group-kanan .fasilitas-container .fasilitas-item:has(input:checked) {
+  background-color: #2966CB;
+  border-color: #2966CB;
+  color: #fff;
+}
+
+/* ======================
+   Divider
+   ====================== */
+.divider {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* ======================
+   Form Actions (Tombol)
+   ====================== */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-button,
+.reset-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.submit-button {
+  background-color: #2966CB;
+  color: #fff;
+}
+
+.submit-button:hover {
+  background-color: #385bbf;
+  transform: scale(1.02);
+}
+
+.reset-button {
+  background-color: #ccc;
+  color: #333;
+}
+
+.reset-button:hover {
+  background-color: #aaa;
+  transform: scale(1.02);
+}
+
+/* FOOTER */
+.footer {
+  background-color: #2966CB; /* Warna biru seperti pada gambar */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.logo-kostin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-kostin img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}

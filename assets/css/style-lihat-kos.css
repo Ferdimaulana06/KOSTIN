@@ -1,0 +1,831 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: rgb(255, 255, 255);
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    justify-content: start;
+    margin-right: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background: white;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown user */
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  list-style: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem 0;
+}
+
+.user-menu:hover .user-dropdown {
+  display: block;
+}
+
+.user-icon{
+background: none;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+border-radius: 50%;
+}
+.user-icon:hover{
+background: #ededed;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    gap: 52px;
+    font-size: 16px;
+    list-style-type: none;
+    margin-right: 20px;
+    justify-content: start;
+    margin-left: 0px;
+
+}
+
+.nav-links a{
+    color: #333;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
+
+}
+
+  .user-icon img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: end;
+    align-items: end;
+  }
+
+/* ======================
+   Bagian Pencarian
+   ====================== */
+.search-section {
+    background-color: #fff;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.search-container {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0.5rem auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.search-input-custom {
+    flex: 1;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    background: #fafafa;
+    color: #333;
+}
+
+.search-input-custom::placeholder {
+    color: #999;
+}
+
+.search-button-custom {
+    background-color: #2966CB;
+    border: none;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-button-custom:hover {
+    background-color: #183768;
+}
+
+.icon-cari {
+    width: 20px;
+    height: 20px;
+}
+
+/*untuk main content*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsif */
+  gap: 16px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 250px; /* Tinggi tetap */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya untuk placeholder "no image" */
+.gallery-image[src*="no-image.png"] {
+  opacity: 0.7;
+  filter: grayscale(1);
+}
+
+.no-image {
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+  padding: 40px;
+  border: 2px dashed #ddd;
+  border-radius: 12px;
+}
+/*
+Untuk nama kost dan detail lainnya
+*/
+
+
+.kos-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    max-width: 75rem;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  
+  .kos-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .kos-details {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .kos-category {
+    background-color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0.5px solid #333;
+  }
+  
+  .kos-rating {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .kos-actions {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+  }
+  
+  .share,.save {
+    background-color: #ffffff;
+    border: 1px solid #555;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .share:hover {
+    background-color: #ddd;
+    transition: 0.5s;
+    transition-timing-function: linear;
+  }
+
+  .save:hover{
+    background-color: #ddd;
+    transition: 0.5s;
+    transition-timing-function: linear;
+  }
+
+  .kos-container2 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+    gap: 32px;
+
+}
+  
+#online-text{
+    color: rgb(0, 182, 12);
+}
+
+.kos-sub1{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+}
+/*
+UNTUK KOTAK DI KANAN
+*/
+.container-total-pembayaran{
+    width: 636px;
+    padding: 10px;
+}
+
+.total-pembayaran{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 36px;
+    border-radius: 12px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 15px 1px #d5d5d5;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+
+.text-total{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.container-sewa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.container-sewa a {
+    text-decoration: none;
+}
+
+.tanggal-sewa{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #8476ff;
+    background-color: #f2f4ff;
+    padding:10px ;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    cursor:pointer;
+}
+.tanggal-sewa p{
+    font-size: smaller;
+}
+
+.tanggal-sewa img{
+    height: 16px;
+    width: 16px;
+}
+.lama-sewa img{
+    height: 16px;
+    width: 16px;
+}
+
+.lama-sewa p{
+    font-size: smaller;
+}
+
+.lama-sewa{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #8476ff;
+    background-color: #f2f4ff;
+    padding:10px ;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    cursor:pointer;
+}
+
+.text-total p{
+    color: #555;
+}
+.text-total h2{
+    color: #00b54b;
+}
+/*=================================================================================================*/
+
+
+.profile-photos{
+    height: 70px;
+    width: 70px;
+}
+
+.kos-info2{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 32px;
+    gap: 20px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.tombol-tanya-pemilik{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: #4262ff;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Ini menghilangkan underline jika elemen ini adalah <a> */
+}
+.tombol-tanya-pemilik:hover{
+    transition: 0.5s;
+    transition-timing-function: linear;
+    text-decoration: none; /* Pastikan underline tetap hilang saat hover */
+}
+.tombol-tanya-pemilik img{
+    height: 15px;
+    width: 15px;
+    text-decoration: none;
+}
+.tombol-tanya-pemilik p{
+    color: #f2f4ff;
+    text-decoration: none;
+}
+
+/* Bagian ini memastikan semua link di dalam tombol tidak ada underline */
+.tombol-tanya-pemilik a,
+.tombol-tanya-pemilik a:visited,
+.tombol-tanya-pemilik a:hover,
+.tombol-tanya-pemilik a:active {
+    text-decoration: none !important;
+    color: inherit;
+}
+/*
+UNTUK BAGIAN KIRI
+*/
+.kos-left-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.kos-info3{
+    display: flex;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 32px;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #ddd;
+}
+
+.kos-info3 img{
+    height: 20px;
+    width: 20px;
+}
+
+.spesifikasi1{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    color: #555;
+}
+.spesifikasi2{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    color: #555;
+}
+
+.kos-info3 img{
+    height: 25px;
+    width: 25px;
+}
+
+.kos-info4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 32px;
+    gap: 20px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #ddd;
+}
+
+.fasilitas-container{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    width: 50%;
+
+}
+
+.fasilitas1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fasilitas1 img{
+    height: 20px;
+    width: 20px;
+}
+
+.fas1 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: start;
+    color: #555;
+}
+.fas2 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: start;
+    color: #555;
+}
+.fas3 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: start;
+    color: #555;
+}
+.fas4 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: start;
+    color: #555;
+}
+
+.fasilitas2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fas2-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: start;
+    color: #555;
+}
+.fas2-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: start;
+    color: #555;
+}
+.fas2-3 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: start;
+    color: #555;
+}
+.fas2-4 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: start;
+    color: #555;
+}
+
+.fasilitas2 img{
+    height: 20px;
+    width: 20px;
+}
+
+.kos-info5{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    gap: 12px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    width: 100%;
+}
+.top-comment-section{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.top-comment-section img{
+    height: 32px;
+    width: 32px;
+}
+
+.star-ratingss{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 64px;
+    justify-content: space-between;
+    
+}
+.star-rating-left{
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+
+}
+.star-rating-right{
+    display: flex;
+    flex-direction: row;
+    gap:28px;
+
+}
+
+.kategori-rating{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.bintang-rating{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.bintang-rating img{
+    height: 16px;
+    width: 16px;
+}
+
+.bintang-atas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 24px;
+    gap: 4px;
+}
+.bintang-tengah{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 24px;
+    gap: 4px;
+}
+.bintang-bawah{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+    gap: 4px;
+}
+
+.bintang-rating-kanan{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.bintang-rating-kanan img{
+    height: 16px;
+    width: 16px;
+}
+
+.star-rating-right{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.bintang-atas-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 24px;
+    gap: 4px;
+}
+
+.bintang-tengah-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 24px;
+    gap: 4px;
+
+}
+
+.bintang-bawah-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+    gap: 4px;
+}
+
+.number-rate{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #2966CB; /* Warna biru seperti pada gambar */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.logo-kostin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-kostin img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+
+
+  .sewakan-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2966CB;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    max-width: fit-content;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .sewakan-button:hover{
+    background-color: #3482ff;
+    transition: ease-in-out 0.3s;
+    transform: scale(1.05);
+  }
+
+  .sewakan-button a{
+    text-decoration: none;
+  }
+
+  .right-nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-direction: row;
+  }
+

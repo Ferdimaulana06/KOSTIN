@@ -1,0 +1,432 @@
+/* ================================================
+   style-cari.css
+   ================================================
+   Semua elemen menggunakan font Poppins
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ======================
+   Navbar (tetap sama)
+   ====================== */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    justify-content: start;
+    margin-right: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background: white;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+}
+
+.user-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.user-icon:hover {
+    background: #ededed;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+    font-size: 16px;
+    list-style-type: none;
+    margin-right: 20px;
+    justify-content: start;
+    margin-left: 0px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+.user-icon img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ======================
+   Bagian Pencarian
+   ====================== */
+.search-section {
+    background-color: #fff;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.search-container {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0.5rem auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.search-input-custom {
+    flex: 1;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    background: #fafafa;
+    color: #333;
+}
+
+.search-input-custom::placeholder {
+    color: #999;
+}
+
+.search-button-custom {
+    background-color: #2966CB;
+    border: none;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-button-custom:hover {
+    background-color: #183768;
+}
+
+.icon-cari {
+    width: 20px;
+    height: 20px;
+}
+
+/* ======================
+   Hasil Pencarian
+   ====================== */
+.results-section {
+    padding: 2rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Container untuk semua card: satu kolom vertikal */
+.results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* spasi antar kartu */
+}
+
+/* Tiap kartu menempati satu baris penuh */
+.result-card {
+    display: flex;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    align-items: stretch;
+    /* Hapus bayangan / hover */
+    box-shadow: none;
+}
+
+/* Latar abu muda untuk baris ganjil/genap */
+.result-card:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.result-card:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Border-bottom setiap kartu, kecuali kartu terakhir */
+.result-card {
+    border-bottom: 1px solid #e0e0e0;
+}
+.results-container .result-card:last-child {
+    border-bottom: none;
+}
+
+/* ======================
+   Gambar (50% width, tinggi tetap)
+   ====================== */
+.result-image {
+    width: 50%;
+    height: 200px;        /* Tinggi tetap 200px */
+    object-fit: cover;    /* Potong gambar agar menutupi area */
+    object-position: center;
+}
+
+/* Jika tidak ada gambar, tampilkan placeholder abu */
+.no-image {
+    width: 50%;
+    height: 200px;        /* Sama tinggi dengan .result-image */
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-style: italic;
+}
+
+/* ======================
+   Konten di Kanan (50% width)
+   ====================== */
+.result-content {
+    width: 50%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Judul Kos sebagai tautan (klik ke detail) */
+.result-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Tautan judul */
+.title-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.title-link:hover {
+    color: #2966CB;
+}
+
+/* Badge kategori dengan border */
+.badge {
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    text-transform: capitalize;
+    background: transparent;
+}
+
+/* Jika ingin badge berwarna solid (opsional), uncomment: */
+/*
+.badge {
+    background: #2966CB;
+    color: #fff;
+    border: none;
+}
+*/
+
+/* Lokasi */
+.result-location {
+    font-size: 0.9rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.location-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Harga */
+.result-price {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #2966CB;
+    margin-bottom: 1rem;
+}
+
+/* Pesan “Tidak ada hasil” */
+.no-results {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+/* ======================
+   Pagination (tetap sama)
+   ====================== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.page-link {
+    text-decoration: none;
+    color: #2966CB;
+    border: 1px solid #2966CB;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.page-link:hover {
+    background-color: #2966CB;
+    color: #fff;
+}
+
+.page-info {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #2966CB; /* Warna biru seperti pada gambar */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.logo-kostin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-kostin img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/* ======================
+   Responsive (Opsional)
+   ====================== */
+@media (max-width: 600px) {
+  .result-card {
+    flex-direction: column;
+  }
+  .result-image,
+  .no-image,
+  .result-content {
+    width: 100%;
+    height: auto;
+  }
+  .result-image {
+    height: 180px; /* sedikit lebih pendek di mobile */
+  }
+}
+
+  .sewakan-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2966CB;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    max-width: fit-content;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .sewakan-button:hover{
+    background-color: #3482ff;
+    transition: ease-in-out 0.3s;
+    transform: scale(1.05);
+  }
+
+  .sewakan-button a{
+    text-decoration: none;
+  }
+
+  .right-nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-direction: row;
+  }
