@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background: white;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+    max-width: 100rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+.user-icon{
+background: none;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+border-radius: 50%;
+}
+.user-icon:hover{
+background: #ededed;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    gap: 52px;
+    font-size: 16px;
+    list-style-type: none;
+    margin-right: 20px;
+    justify-content: start;
+    margin-left: 0px;
+
+}
+
+.nav-links a{
+    color: #333;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
+
+}
+
+  .user-icon img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: end;
+    align-items: end;
+  }
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.cta {
+  background-color: #2c65dc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.contact-section {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: start; 
+}
+
+.contact-image {
+    flex: 0.5;
+    height: 100%;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.contact-form {
+    flex: 1;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.contact-form h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact-form p {
+  margin-bottom: 1.5rem;
+  color: #555;
+  text-align: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #2c65dc;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+.input-group img {
+    width: 12px;
+    height: 10px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+  
+.input-group input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+}
+  
+.name-fields .input-group {
+    flex: 1;
+}  
+
+.social {
+  margin-top: 1rem;
+  align-items: center;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sosmed {
+  display: inline-block;
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+.sosmed img {
+    width: 10x; 
+    height: 10px;
+    object-fit: contain;
+    vertical-align: middle;
+    display: inline-block;
+}  
+
+/* FOOTER */
+.footer {
+  background-color: #2966CB; /* Warna biru seperti pada gambar */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.logo-kostin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-kostin img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+  .sewakan-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2966CB;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    max-width: fit-content;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .sewakan-button:hover{
+    background-color: #3482ff;
+    transition: ease-in-out 0.3s;
+    transform: scale(1.05);
+  }
+
+  .sewakan-button a{
+    text-decoration: none;
+  }
+
+  .right-nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-direction: row;
+  }
+
+  @layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+}
