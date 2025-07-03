@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: rgb(255, 255, 255);
+    height: 100%;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background: white;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+    max-width: 100rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+.user-icon{
+background: none;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+border-radius: 50%;
+}
+.user-icon:hover{
+background: #ededed;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    gap: 52px;
+    font-size: 16px;
+    list-style-type: none;
+    margin-right: 20px;
+    justify-content: start;
+    margin-left: 0px;
+
+}
+
+.nav-links a{
+    color: #333;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
+
+}
+
+  .user-icon img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .sectionatas{
+    background-image: url('../img/layanan/layanan.png');
+    
+}
+
+/* FOOTER */
+.footer {
+  background-color: #2966CB; /* Warna biru seperti pada gambar */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.logo-kostin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-kostin img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
